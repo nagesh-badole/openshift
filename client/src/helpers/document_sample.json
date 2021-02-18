@@ -1,0 +1,38 @@
+{
+    "name": "Sample Stack",
+    "description": "Description of sample stack",
+    "logo": "_images/stack.png",
+    "has_supporting_content": true,
+    "stack_id": "unique_sample_stack_id",
+    "type": "Stack",
+    "categories": [
+      "Container",
+      "Data API"
+    ],
+    "platform": "Kubernetes",
+    "cover": "cover.md",
+    "commands": [
+      {
+        "description": "simple command",
+        "exec": "mkdir test_sample_app"
+      }
+    ],
+    "display": [
+      {
+        "name": "Developer Dashboard",
+        "url": "##DNS.host##/codeserver",
+        "enabled": true
+      }
+    ],
+    "meta": {
+      "Install time": "2",
+      "Language": [
+        "Java",
+        "NodeJs"
+      ],
+      "categories": [
+        "Container",
+        "Data API"
+      ]
+    }
+  }
