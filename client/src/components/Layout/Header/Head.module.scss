@@ -1,0 +1,27 @@
+.headerLogo {
+    margin-right: 1rem;
+}
+
+.logoDivider {
+    border-left: 1px solid white;
+    margin-right: 1rem;
+    height: 2.6rem;
+}
+
+.headerLoginLink {
+        color: white !important;
+        cursor: auto;
+}
+
+.loginSection {
+    color: #fff;
+    margin-left: auto;
+    line-height: 2rem;
+    cursor: pointer;
+    svg {
+        vertical-align: bottom;
+        margin-right: 0.5rem;
+    }
+}
+
+

@@ -1,0 +1,67 @@
+.headerLogo {
+    margin-right: 1rem;
+}
+
+.logoDivider {
+    border-left: 1px solid white;
+    margin-right: 1rem;
+    height: 2.6rem;
+}
+
+.headerLoginLink {
+        color: white !important;
+        cursor: auto;
+}
+
+
+.jupyterHub {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+    color: #fff;
+    font-size: 0.875rem;
+    cursor: pointer;
+    img {
+        margin-right: 0.5rem;
+    }
+    .jupyterHubTitle::before{
+        background: url("../../../../assets/images/JupyterLogo.png") center center no-repeat #ffffff;
+    }
+    .url-label {
+        margin-bottom: 0.5rem;
+        display: block;
+    }
+    .credentials_values {
+        padding: 5px;
+      }
+      .credentials_item_title {
+        padding: 5px;
+        display: inline-block;
+        vertical-align: middle;
+        width: 15%;
+        color: #8D8D8D;
+      }
+      .credentials_item_value {
+        font-size: 14px;
+        padding: 5px;
+        display: inline-block;
+        vertical-align: middle;
+        width: 75%;
+        font-weight: bold;
+        word-wrap: break-word;
+      }
+  
+}
+
+.credentials_item_copy {
+    display: inline-block;
+    vertical-align: middle;
+    margin-top: 1.5rem;
+    margin-left: -0.5rem;
+    border-radius: 3px;
+    border: 1px solid #d2d2d2;
+    height: 2.5rem;
+}
+
+
+

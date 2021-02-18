@@ -1,0 +1,41 @@
+// .stack__content {
+//     padding-left: 55px;
+// }
+// .form-body{
+//     padding: 2rem;
+//     padding-bottom: 4rem;
+//     width: 60%;
+//     margin-left: 20%;
+// }
+
+// .form-element{
+//     //margin-bottom: 2rem;
+//     //width: 50% !important;
+// }
+
+// .button{
+//     margin-top: 1rem !important;
+//     margin-left: 40% !important;
+// }
+
+.save-stack-button {
+    float: right;
+}
+.footer-content{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    button {
+        margin-left: auto;
+    }
+    .success-msg {
+        color: rgb(36, 161, 72);
+        font-weight: 500;
+    }
+}
+
+.form-body {
+    .bx--number__controls {
+        display: none;
+    }
+}

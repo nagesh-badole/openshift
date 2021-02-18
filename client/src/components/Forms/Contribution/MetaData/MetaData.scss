@@ -1,0 +1,36 @@
+.metaDetails {
+    .bx--fieldset {
+        width: 45rem;
+    }
+    margin-bottom: 20rem;
+}
+
+.sectionHeader {
+    padding-top: 35px;
+    padding-bottom: 16px;
+    font-size: 2rem;
+}
+
+.bx--form {
+    width: 150%;
+}
+
+.required-field::after {
+    content: "*";
+    color: red;
+  }
+
+  .add-command-section{
+    background-color: #EEEE;
+    padding-right: 1rem;
+    padding-left: 1rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+.radio-btns{
+    display: flex;
+    label{
+        margin-right: 1rem;
+    }
+}

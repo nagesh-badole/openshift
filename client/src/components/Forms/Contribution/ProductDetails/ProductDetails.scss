@@ -1,0 +1,47 @@
+#content {
+    width: 35rem;
+}
+
+.bx--modal-container {
+    margin-top: 8rem;
+    width: 55rem !important;
+}
+
+.bx--modal-body {
+    overflow-x: hidden;
+}
+
+.cover-editor {
+    margin-top: 1rem;
+    margin-bottom: 15rem;
+}
+
+.rmel-icon-fullscreen {
+    display: none;
+}
+
+// .bx--modal-container {
+//     min-width: fit-content !important;
+//     overflow-x: hidden !important;
+//     margin-left: 1rem;
+//     margin-right: 1rem;
+//     margin-top: 1rem !important;
+//     max-height: 100% !important;
+//     .bx--header {
+//         position: relative !important;
+//     }
+
+//     .operator_playground__container {
+//         width: 90vw !important;
+//         border-bottom: 1px solid #e0e0e0;
+//     }
+// }
+.sectionHeader {
+    padding-top: 35px;
+    padding-bottom: 16px;
+    font-size: 2rem;
+}
+
+.custom-invalidText {
+    color: red;
+}

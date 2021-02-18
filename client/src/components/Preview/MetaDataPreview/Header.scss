@@ -1,0 +1,78 @@
+.custompage-header {
+  height: 32px;
+  padding-left: 35px;
+  margin-top: 0.8rem;
+  display: flex;
+  justify-content: space-between;
+
+  .vmcontrols__noPadding {
+    padding-right: none;
+  }
+
+  .vmcontrols__paddingRight {
+    padding-right: 40px;
+  }
+}
+
+.custompage-header-banner {
+  // height: 50px;
+  // padding-left: 30px;
+  display: flex;
+  padding: 0 20px 15px 30px;
+
+  .custom-svg {
+    fill: grey;
+    margin-right: 10px;
+  }
+
+  .customPagebreadcrumb {
+    a {
+      text-decoration: none;
+    }
+  }
+
+  .custom-header {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    h3 {
+      font-size: 1.5rem !important;
+      font-weight: 400;
+      line-height: 2rem !important;
+    }
+    .description {
+      line-height: 1.75rem;
+      font-size: 0.875rem;
+    }
+    .custom-header-title {
+      display: flex;
+      svg {
+        margin-left: 10px;
+        align-self: center;
+        color: #0066cc;
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+.boxShadow {
+  box-shadow: 0 5px 6px -6px #d4d4d4;
+}
+
+.disabled {
+  color: #e0e0e0;
+  pointer-events: none;
+}
+
+.breadcrumb_homeLink {
+  text-decoration: none;
+  display: flex;
+  svg {
+    margin-right: 10px;
+  }
+}
+
+.landingPage__content {
+  margin-top: 0rem;
+}

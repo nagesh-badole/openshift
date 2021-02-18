@@ -1,0 +1,316 @@
+
+.ProjectDetailsContainer {
+  padding: 1.5rem 1rem 0 2rem;
+  background-color: rgb(237, 245, 255);
+  .ProjectDetails {
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+    border-bottom: 1px solid #d4d4d4;
+    background-color: inherit;
+    padding: 0 0 1rem 0;
+  }
+}
+.OperatorDetails {
+  padding: 0 1rem 1rem 2rem;
+  // display: flex;
+  flex-wrap: wrap;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  align-items: flex-start;
+  margin-top: 1.5rem;
+  // h6 {
+  //   margin-top: 1.25rem;
+  // }
+  .bx--toast-notification {
+    width: 100%;
+    .bx--toast-notification__subtitle {
+      line-height: 1.5rem;
+    }
+  }
+  .OperatorHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+  }
+
+  .bx--tile {
+    border: 1px solid #d4d4d4;
+    margin-bottom: 1rem;
+  }
+
+  @media (min-width: 768px) {
+    .bx--tile {
+      flex-basis: 100%;
+      margin-right: 0;
+    }
+  }
+  @media (min-width: 992px) {
+    .bx--tile {
+      flex-basis: calc(100% / 2 - 20px);
+      margin-right: 1rem;
+    }
+    .bx--tile:nth-child(2n + 2) {
+      margin-right: 0;
+    }
+  }
+
+  .CardIcon {
+    margin-bottom: 10px;
+  }
+  .CardHeader {
+    font-size: 1.25rem;
+    font-weight: 500;
+    line-height: 1.75rem;
+    letter-spacing: 0;
+  }
+  .CardContent {
+    margin-bottom: 16px;
+  }
+  .CardContent .CommandBlock {
+    // margin-top: 1.25rem;
+    display: none;
+    margin-bottom: 1rem;
+  }
+  .CardContent div:nth-child(-n + 3) {
+    display: block !important;
+  }
+  .CardContent h6 {
+    margin-bottom: 10px;
+  }
+  .CodeInstruction {
+    color: #a8a8a8;
+    font-size: 0.75rem;
+  }
+  .CodeBlock {
+    background-color: #f6f8fa;
+    padding: 0.5rem 0.75rem;
+    font-size: 0.8rem;
+    font-weight: 500;
+    line-height: 1rem;
+    min-height: 1rem;
+    word-break: break-word;
+    letter-spacing: 1px;
+    margin-bottom: 1rem;
+    // white-space: pre-wrap;
+    span:first-child {
+      display: inline;
+      margin-right: 0.5rem;
+    }
+  }
+  .ToggleButton {
+    font-size: 0.875rem;
+    padding: 1rem 0;
+    color: rgb(0, 67, 206);
+    cursor: pointer;
+  }
+  .CardAction .ExecutionMessage {
+    float: right;
+    justify-content: center;
+    padding: calc(0.675rem - 3px) 60px calc(0.675rem - 3px) 12px;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    line-height: 1.5rem;
+    .Success {
+      color: rgb(36, 161, 72);
+      display: flex;
+    }
+    .Error {
+      color: rgb(253, 209, 58);
+      display: flex;
+    }
+    svg {
+      margin-right: 6px;
+    }
+  }
+
+  .OperatorCardContainer {
+    display: flex;
+    flex-direction: column;
+    padding: 1.25rem;
+    .CardIcon {
+      margin-bottom: 10px;
+    }
+    .CardHeader {
+      font-size: 1.25rem;
+      font-weight: 500;
+      line-height: 1.75rem;
+      letter-spacing: 0;
+    }
+    .CardContent .CommandBlock {
+      margin-top: 1.25rem;
+      display: none;
+    }
+    .CardContent div:nth-child(1) {
+      display: block !important;
+    }
+    .CardContent h6 {
+      margin-bottom: 10px;
+    }
+    .CodeInstruction {
+      color: #a8a8a8;
+      font-size: 0.75rem;
+    }
+    .CodeBlock {
+      background-color: #f4f4f4;
+      padding: 0.5rem 0.75rem;
+      color: #a8a8a8;
+      font-size: 0.825rem;
+      line-height: 1rem;
+      height: 3rem;
+      word-break: break-word;
+      // white-space: pre-wrap;
+      span:first-child {
+        display: inline;
+        margin-right: 0.5rem;
+      }
+    }
+    .ToggleButton {
+      font-size: 0.875rem;
+      padding: 1rem 0;
+      color: rgb(0, 67, 206);
+      cursor: pointer;
+    }
+    .CardAction .ExecutionMessage {
+      float: right;
+      justify-content: center;
+      padding: calc(0.675rem - 3px) 60px calc(0.675rem - 3px) 12px;
+      padding-left: 1rem;
+      padding-right: 1rem;
+      line-height: 1.5rem;
+      .Success {
+        color: rgb(36, 161, 72);
+        display: flex;
+      }
+      .Error {
+        color: rgb(253, 209, 58);
+        display: flex;
+      }
+      svg {
+        margin-right: 6px;
+      }
+    }
+  }
+}
+.success_response {
+  display: flex;
+  color: rgb(36, 161, 72) !important;
+
+.success_response_text {
+  line-height: 25px;
+  margin-left: 10px;
+}
+}
+.error_response {
+  display: flex;
+  color: rgb(253, 209, 58);
+  
+.error_response_text {
+  line-height: 25px;
+  margin-left: 10px;
+}
+}
+
+.cover_section {
+  padding-bottom: 16px;
+  padding-top: 1rem;
+  ol, ul {
+    list-style: disc !important;
+  }
+}
+
+.commands_section {
+  padding-bottom: 16px;
+
+  .bx--accordion__title {
+    font-size: 1rem !important;
+    font-weight: 500 !important;
+  }
+}
+
+
+
+.ProjectDetailsItem {
+  min-width: 0 !important;
+  border-right: 1px solid #d4d4d4;
+  margin-right: 0px !important;
+  word-break: break-word;
+  margin-bottom: 10px;
+  .BoldFont {
+    font-weight: 600;
+  }
+  .ellipsis {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .ProjectDetailsItem {
+    flex-basis: calc(100% / 3);
+    padding-right: 1rem;
+  }
+  .ProjectDetailsItem:nth-child(3n + 3) {
+    //padding-right: 0;
+    border-right: unset;
+  }
+}
+
+@media (min-width: 992px) {
+  .ProjectDetailsItem {
+    flex-basis: calc(100% / 5);
+    padding-right: 1rem;
+    //padding-left: 1rem;
+  }
+  .ProjectDetailsItem:nth-child(5n + 5) {
+    //padding-right: 0;
+    border-right: unset;
+  }
+}
+
+.ProjectDetailsItem:first-child {
+  //padding-left: 0;
+}
+
+.execute_section {
+  padding: 1.5rem 1.5rem 1.5rem 2rem;
+  background-color: rgb(237, 245, 255);
+  display: flex;
+  justify-content: flex-end;
+}
+
+.bx--accordion__content{
+  padding-right: 0 !important;
+}
+.bx--accordion__title {
+  font-size: 1rem !important;
+  font-weight: 500 !important;
+}
+
+
+
+.bucket-info-container {
+  margin-left: -0.5rem !important;
+  margin-right: -0.5rem !important;
+  div[class^='bx--col-'], div[class*=' bx--col-']{
+    padding: 0.5rem;
+  }
+  .bucket-info-card {
+    padding: 1rem;
+    border: 1px solid #d4d4d4;
+    display: flex;
+    flex-direction: column;
+    .bucket-title {
+      font-size: 0.85rem;
+      line-height: 1.5rem;
+      margin-bottom: 0.5rem;
+      span:first-child {
+        font-weight: 500;
+        margin-right: 6px;
+      }
+    }
+  }
+}
+

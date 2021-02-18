@@ -1,0 +1,144 @@
+.body {
+    width: 100vw;
+    height: 100vh;
+    background: ghostwhite !important;
+    overflow-y: auto;
+}
+
+.form {
+    margin-bottom: 5%;
+    margin-top: 2%;
+}
+
+.catalog-body {
+    margin-left: 12rem;
+}
+
+.contribute-title {
+    height: 4rem;
+    line-height: 4rem;
+    font-size: large;
+    font-weight: 500;
+    margin-left: 4rem;
+}
+
+// .bx--side-nav__navigation{
+//     margin-top: 4rem;
+//     color: white !important;
+//     background: ghostwhite !important;
+//     width: 20rem !important;
+// }
+
+// .bx--side-nav.bx--side-nav--rail:not(.bx--side-nav--fixed):hover, .bx--side-nav--expanded{
+//     max-width: none !important;
+// }
+
+// .bx--form{
+//     width: 70% !important;
+// }
+
+// .bx--side-nav__submenu{
+//     height: 3rem !important;
+// }
+
+// .bx--side-nav__menu a.bx--side-nav__link{
+//     height: 3rem !important;
+//     //padding-left: 1rem;
+// }
+
+// .bx--side-nav__submenu-title{
+//     padding-left: 2rem;
+// }
+
+// .bx--side-nav__link-text{
+//     padding-left: 2rem;;
+// }
+
+// .bx--side-nav__link{
+//     height: 3rem;
+// }
+
+#product-details {
+    margin-bottom: "18%";
+    width: 80%;
+}
+
+.rwt__tablist {
+    width: 15rem;
+    position: fixed;
+}
+
+.rwt__tablist[aria-orientation="vertical"]{
+    height: -webkit-fill-available !important;
+}
+
+.rwt__tabpanel {
+    margin-left: 18rem;
+}
+
+.bx--form {
+    width: 150%;
+}
+
+.dowload-tab {
+    margin-top: 2rem;
+    margin-left: 2rem;
+}
+
+.before-download-instructions {
+    margin-top: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.after-download-instructions {
+    margin-top: 0.5rem;
+    margin-bottom: 1rem;
+    margin-left: 1.5rem;
+}
+
+.after-download-instructions {
+    li {
+        font-size: 14px;
+        margin-top: 1rem !important;
+        margin-left: 2rem !important;
+        margin-bottom: 1rem !important;
+        list-style: decimal;
+        display: list-item;
+    }
+}
+
+.downlaod-zip{
+    margin-top: 1rem !important;
+    margin-left: 1.5rem !important;
+}
+
+.rwt__tablist[aria-orientation="vertical"] .rwt__tab[aria-selected="true"]:after{
+    border-left: 4px solid red;
+    border-right: none !important;
+    right: none !important;
+    left: 0px !important;
+}
+
+.rwt__tablist  {
+    button {
+        text-align: left !important;
+    }
+}
+
+.operator_playground__container{
+    overflow-y: hidden !important;
+    overflow-x: hidden;
+}
+
+.rwt__tab[aria-selected="true"] {
+    font-weight: 600;
+}
+.customInvalidText{
+    color :red;
+    margin-left: 20px;
+}
+
+.customValidText{
+    color : green;
+    margin-left: 20px;
+}
