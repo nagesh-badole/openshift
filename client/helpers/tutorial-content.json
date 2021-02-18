@@ -1,0 +1,4 @@
+{
+    "content":
+    "---\ntitle: Sample Tutorial\ndescription: This is a sample tutorial to guide user on creating his own tutorial in md.User should follow exact syntax given below to render in user guide\n---\n\n### Accordian 1 - Text\n\nAccordian text goes here\n\n### Accordian 2 - Dynamically replacing values\n\nUser can define values as below which needs to be replaced dynamically during run time.\n\nURL :  http://##DNS.IP##:30455\n\n### Accordian 3 - Images\n\n![codestructure](_images/mvc-db-structure.png)\n\n### Accordian 4 - UL - LI\n\nSimple text to demonstrate ul li :\n- list text 1.\n- list text 2.\n- list text 3.\n\n### Accordian 5 - Commands\n\nOpen terminal tab from dashboard to execute any commands. \n\nOne can execute them by clicking :\n\n```execute\npwd\n```\n\nOne can copy them by clicking :\n\n```copy\nls -l\n```"
+}

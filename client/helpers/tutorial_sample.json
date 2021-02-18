@@ -1,0 +1,28 @@
+{
+    "name": "Sample Stack Tutorial",
+    "appLayout": "accordion",
+    "appTheme": "g90",
+    "footer": "footer.md",
+    "tutorials": [
+      {
+        "description": "Some description about tutorial 1",
+        "duration": "10 mins",
+        "tutorial_name": "Sample_tutorial_1.md",
+        "title": "Tutorial 1"
+      }
+    ],
+    "usefulLinks": [
+        {
+            "description": "Some description about Link",
+            "title": "Useful Link1",
+            "url": "https://www.google.com"
+        }
+    ],
+    "demos": [
+        {
+            "description": "Some description about Demo Link",
+            "title": "Demo Link1",
+            "url": "https://www.google.com"
+        }
+    ]
+  }
