@@ -1,0 +1,44 @@
+.#{$prefix}--select-input {
+  appearance: none;
+  -webkit-appearance: none;
+  background-color: $om-color-white;
+  border: 1px solid $om-color-gray-lighter;
+  border-radius: $om-border-radius;
+
+  &:hover {
+    background-color: $om-color-white;
+    border-bottom: solid 1px $rh-color-blue;
+    border-radius: $om-border-radius $om-border-radius 0 0;
+  }
+
+  &:focus {
+    border-radius: $om-border-radius;
+    border: 1px solid $om-color-primary-blue;
+    outline: 0;
+  }
+
+  &:disabled {
+    color: $om-color__text-secondary;
+    background-color: $om-color-gray-lightest;
+    border-color: $om-color-gray-lightest;
+  }
+}
+
+.#{$prefix}--select-input__wrapper[data-invalid] {
+  outline: 0;
+}
+
+.#{$prefix}--select-input__wrapper[data-invalid] .#{$prefix}--select-input {
+  outline: 0;
+  border: 1px solid $om-color-danger;
+  border-radius: $om-border-radius;
+}
+
+.#{$prefix}--label {
+  color: $om-color-gray-darkest;
+}
+
+.#{$prefix}--select.#{$prefix}--skeleton:before,
+.#{$prefix}--select.#{$prefix}--skeleton {
+  border-radius: $om-border-radius;
+}

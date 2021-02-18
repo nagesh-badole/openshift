@@ -1,0 +1,177 @@
+.#{$om-prefix}-type {
+  &__h1,
+  &__headline-01 {
+    @include typography-h1;
+  }
+
+  &__h2,
+  &__headline-02 {
+    @include typography-h2;
+  }
+
+  &__h3,
+  &__headline-03 {
+    @include typography-h3;
+  }
+
+  &__h4,
+  &__headline-04 {
+    @include typography-h4;
+  }
+
+  &__h5,
+  &__headline-05 {
+    @include typography-h5;
+  }
+
+  &__sh1 {
+    @include typography-sh1;
+  }
+
+  &__sh2 {
+    @include typography-sh2;
+  }
+
+  &__sh3 {
+    @include typography-sh3;
+  }
+
+  &__b1 {
+    @include typography-b1;
+  }
+
+  &__b2 {
+    @include typography-b2;
+  }
+
+  &__code1,
+  &__code-01 {
+    @include typography-code1;
+  }
+
+  &__code2,
+  &__code-02 {
+    @include typography-code2;
+  }
+
+  &__helper,
+  &__legal {
+    @include typography-helper;
+  }
+
+  &__headline-06 {
+    @include typography-h6;
+  }
+
+  &__headline-07 {
+    @include typography-h7;
+  }
+
+  &__headline-08 {
+    @include typography-h8;
+  }
+
+  &__headline-09 {
+    @include typography-h9;
+  }
+
+  &__headline-10 {
+    @include typography-h10;
+  }
+
+  &__subheadline-01 {
+    @include typography-subheadline1;
+  }
+
+  &__subheadline-02 {
+    @include typography-subheadline2;
+  }
+
+  &__subheadline-03 {
+    @include typography-subheadline3;
+  }
+
+  &__subheadline-04 {
+    @include typography-subheadline4;
+  }
+
+  &__body-text-01 {
+    @include typography-b1;
+  }
+
+  &__body-text-02 {
+    @include typography-b2;
+  }
+
+  &__body-text-03 {
+    @include typography-b3;
+  }
+
+  // Modifiers
+
+  &--REGULAR {
+    font-weight: om--font-weight('regular') !important;
+  }
+
+  &--MEDIUM {
+    font-weight: om--font-weight('medium') !important;
+  }
+
+  &--BOLD {
+    font-weight: om--font-weight('bold') !important;
+  }
+
+  &--BLACK {
+    font-weight: om--font-weight('black') !important;
+  }
+
+  &--ITALIC {
+    font-style: italic !important;
+  }
+
+  &--NO-WRAP {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  &--ERROR {
+    color: $support-01 !important;
+  }
+
+  &--SUCCESS {
+    color: $support-02 !important;
+  }
+
+  &--WARNING {
+    color: $support-03 !important;
+  }
+
+  &--INFO {
+    color: $support-04 !important;
+  }
+
+  &--LINK {
+    color: $link-01 !important;
+  }
+
+  &--PRIMARY {
+    color: $interactive-01 !important;
+  }
+
+  &--INHERIT-COLOR {
+    color: inherit !important;
+  }
+
+  &--INVERSE {
+    color: $inverse-01 !important;
+  }
+
+  &--SECONDARY {
+    color: $om-color__text-secondary !important;
+  }
+
+  &--TERTIARY {
+    color: $om-color__text-tertiary !important;
+  }
+}

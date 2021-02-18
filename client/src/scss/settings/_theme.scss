@@ -1,0 +1,48 @@
+// Custom Carbon Theme based on the Red Hat Marketplace Design System
+// https://ibm.invisionapp.com/d/?redirHash=#/projects/prototypes/15354066
+$feature-flags: (
+  grid-columns-16: true,
+);
+
+@import '@carbon/themes/scss/themes';
+@import 'carbon-components/scss/globals/scss/_helper-mixins.scss';
+
+// Base theme to use when building OM Theme
+// To use a different theme, set $baseTheme locally before importing
+// @symposium/ui-styles/scss/styles
+$baseTheme: $carbon--theme--white !default;
+
+$open-marketplace--theme: map-merge(
+  $baseTheme,
+  (
+    interactive-01: $rhm-color__primary,
+    interactive-02: $rhm-color__black,
+    interactive-03: $rhm-color__primary,
+    interactive-04: $rhm-color__primary,
+    danger: $rhm-color__status--DANGER,
+    ui-background: $rhm-color__white,
+    text-01: $rhm-color__typography,
+    text-02: $rhm-color__typography--SECONDARY,
+    text-03: $rhm-color__typography--SECONDARY,
+    link-01: $rhm-color__link,
+    visited: $rhm-color__red--BRAND-VISITED,
+    visited-link: $rhm-color__link--VISITED,
+    focus: $rhm-color__blue--BRAND-FOCUS,
+    hover-primary: $rhm-color__blue--BRAND-HOVER,
+    brand-01: $rhm-color__primary,
+    brand-02: $rhm-color__black,
+    brand-03: $rhm-color__primary,
+    icon-01: $rhm-color__black,
+    icon-02: $rhm-color__black,
+    disabled-01: $rhm-color__disabled,
+    disabled-02: $rhm-color__typography--SECONDARY,
+    disabled-03: $rhm-color__typography--SECONDARY,
+    skeleton-01: $rhm-color__black--200,
+    skeleton-02: $rhm-color__black--300,
+  )
+) !default;
+
+$carbon--theme: $open-marketplace--theme;
+
+@include carbon--theme;
+@import 'carbon-components/scss/globals/scss/styles';

@@ -1,0 +1,95 @@
+.#{$om-prefix}-cta.#{$prefix}--btn {
+  @include base-button;
+  @include om--font-family('display');
+
+  font-weight: om--font-weight('bold');
+
+  &--primary {
+    @include cta-primary;
+  }
+
+  &--secondary {
+    @include button-tertiary;
+  }
+
+  &--tertiary {
+    @include button-secondary-alternative;
+  }
+}
+
+.#{$om-prefix}-cta-link {
+  @include om--font-family('display');
+  @include font-size--b1;
+
+  align-items: center;
+  color: $om-color-link;
+  display: inline-flex;
+  font-weight: om--font-weight('bold');
+  max-width: 20rem;
+  position: relative;
+  text-decoration: none;
+
+  &:not(.#{$om-prefix}-cta-link--disabled):focus,
+  &:not(.#{$om-prefix}-cta-link--disabled):hover {
+    svg {
+      margin-left: $spacing-03;
+      margin-right: 0;
+    }
+  }
+
+  & > svg {
+    fill: $om-color-link;
+    flex-shrink: 0;
+    margin-left: $spacing-02;
+    margin-right: $spacing-02;
+    transition: margin-left 200ms ease, margin-right 200ms ease;
+  }
+
+  &:hover,
+  &:active {
+    color: $om-color-hover-2;
+
+    & > svg {
+      fill: $om-color-hover-2;
+    }
+  }
+
+  &:focus {
+    @include button-focus;
+
+    outline: none;
+  }
+
+  &--disabled {
+    color: $om-color-gray-dark;
+    cursor: not-allowed;
+
+    & > svg,
+    &:active > svg,
+    &:hover > svg,
+    &:focus > svg {
+      fill: $om-color-gray-dark;
+    }
+
+    &:active {
+      pointer-events: none;
+    }
+
+    &:hover,
+    &:focus,
+    &:active {
+      color: $om-color-gray-dark;
+    }
+  }
+
+  &__content {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+}
+
+.#{$om-prefix}-cta.#{$prefix}--btn--secondary.#{$om-prefix}-btn--TRANSPARENT,
+.#{$om-prefix}-cta.#{$prefix}--btn--tertiary.#{$om-prefix}-btn--TRANSPARENT {
+  background-color: transparent;
+}

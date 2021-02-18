@@ -1,0 +1,66 @@
+.#{$prefix}--toast-notification,
+.#{$prefix}--inline-notification {
+  color: $om-color__text-default;
+}
+
+.#{$prefix}--toast-notification__icon {
+  margin-top: $spacing-05;
+}
+
+.#{$prefix}--toast-notification__close-button
+  .#{$prefix}--toast-notification__close-icon,
+.#{$prefix}--inline-notification__close-button
+  .#{$prefix}--inline-notification__close-icon {
+  fill: $om-color-gray-darkerest;
+}
+
+.#{$prefix}--inline-notification__action-button {
+  line-height: 1;
+}
+
+.#{$prefix}--inline-notification__action-button.#{$prefix}--btn--ghost:hover {
+  background-color: $om-color-gray-lightest;
+}
+
+.#{$prefix}--toast-notification__subtitle,
+.#{$prefix}--inline-notification__subtitle {
+  color: $om-color__text-secondary;
+}
+
+.#{$prefix}--toast-notification__caption,
+.#{$prefix}--inline-notification__caption {
+  color: $om-color__text-tertiary;
+}
+
+.#{$prefix}--toast-notification__title {
+  margin-bottom: $spacing-02;
+}
+
+.#{$prefix}--toast-notification__subtitle {
+  margin-bottom: $spacing-07;
+}
+
+.#{$prefix}--toast-notification--error,
+.#{$prefix}--inline-notification--error {
+  @include notification($om-color-danger, $om-color-white);
+}
+
+.#{$prefix}--toast-notification--success,
+.#{$prefix}--inline-notification--success {
+  @include notification($om-color-success, $om-color-white);
+}
+
+.#{$prefix}--toast-notification--warning,
+.#{$prefix}--inline-notification--warning {
+  @include notification($om-color-warning, $om-color-white);
+
+  .#{$prefix}--toast-notification__icon path[data-icon-path='inner-path'],
+  .#{$prefix}--inline-notification__icon path[data-icon-path='inner-path'] {
+    fill: #fff;
+  }
+}
+
+.#{$prefix}--toast-notification--info,
+.#{$prefix}--inline-notification--info {
+  @include notification($om-color-info, $om-color-white);
+}

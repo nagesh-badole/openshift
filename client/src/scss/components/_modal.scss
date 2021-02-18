@@ -1,0 +1,237 @@
+$modal-close-size-mobile: rem(56px);
+$modal-close-size-desktop: rem(48px);
+
+.#{$om-prefix}-page-shell__content--SIDE-NAV .#{$prefix}--modal {
+  width: 100%;
+}
+
+/**
+ * Overlay
+ **/
+
+.#{$prefix}--modal.is-visible {
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+/**
+ * Container
+ **/
+
+.#{$prefix}--modal-container {
+  background-color: $ui-02;
+  border-radius: $om-border-radius;
+  box-shadow: 0 15px 20px 0 rgba(0, 0, 0, 0.3);
+}
+
+/**
+ * Modal Header
+ **/
+
+.#{$prefix}--modal-header,
+.#{$prefix}--modal-container .#{$prefix}--modal-content {
+  padding-left: $spacing-05;
+  padding-right: $spacing-05;
+
+  @include carbon--breakpoint-up('md') {
+    padding-left: $spacing-07;
+    padding-right: $spacing-07;
+  }
+}
+
+.#{$prefix}--modal .#{$prefix}--modal-container .#{$prefix}--modal-header {
+  margin-bottom: 0;
+  min-height: $modal-close-size-mobile;
+  padding-right: $spacing-05;
+  padding-top: $spacing-05;
+
+  @include carbon--breakpoint-up('md') {
+    min-height: calc(#{$modal-close-size-desktop} + #{$spacing-05});
+    padding-right: $spacing-07;
+    padding-top: $spacing-07;
+  }
+}
+
+.#{$prefix}--modal-container .#{$prefix}--modal-header {
+  padding-right: $spacing-05;
+
+  @include carbon--breakpoint-up('md') {
+    padding-left: $spacing-07;
+  }
+}
+
+.#{$prefix}--modal-header__heading {
+  @include typography-h9;
+
+  border-bottom: 1px solid $om-color-border;
+  margin-bottom: $spacing-03;
+  padding-bottom: $spacing-04;
+  padding-right: $modal-close-size-mobile;
+
+  @include carbon--breakpoint-up('md') {
+    margin-bottom: $spacing-04;
+    padding-bottom: $spacing-05;
+  }
+
+  // Hide the title element if no title is provided
+  &:empty {
+    display: none;
+  }
+}
+
+/**
+ * Close Button
+ **/
+
+.#{$prefix}--modal-close {
+  align-items: center;
+  border-radius: $om-border-radius;
+  display: flex;
+  height: $modal-close-size-mobile;
+  justify-content: center;
+  width: $modal-close-size-mobile;
+
+  @include carbon--breakpoint-up('md') {
+    height: $modal-close-size-desktop;
+    right: $spacing-07;
+    top: $spacing-05;
+    width: $modal-close-size-desktop;
+  }
+
+  &:hover {
+    background-color: $rhm-color__black--200;
+  }
+}
+
+.#{$prefix}--modal-close__icon {
+  fill: $rhm-color__black;
+}
+
+/**
+ * Content
+ **/
+
+.#{$prefix}--modal-content {
+  padding-top: $spacing-03;
+
+  @include carbon--breakpoint-up('md') {
+    padding-top: $spacing-04;
+  }
+}
+
+.#{$prefix}--modal-content > * {
+  @include typography-b1;
+}
+
+/**
+ * Footer
+ **/
+
+.#{$prefix}--modal-footer {
+  background-color: $rhm-color__white;
+  height: auto;
+  flex-direction: column-reverse;
+  justify-content: flex-end;
+  padding: 0 $spacing-05 $spacing-07;
+
+  @include carbon--breakpoint-up('md') {
+    flex-direction: row;
+    padding: 0 $spacing-07 $spacing-09;
+  }
+}
+
+/**
+ * Button
+ **/
+
+.#{$prefix}--modal-footer button.#{$prefix}--btn {
+  @include button-size--field;
+
+  height: auto;
+  padding: initial;
+  flex: none;
+  margin-bottom: $spacing-05;
+
+  &:first-child {
+    margin-bottom: 0;
+  }
+
+  @include carbon--breakpoint-up('md') {
+    margin-bottom: 0;
+    margin-left: $spacing-05;
+  }
+}
+.#{$prefix}--modal-footer button.#{$prefix}--btn--secondary {
+  @include button-ghost;
+
+  &:hover,
+  &:active,
+  &:focus {
+    box-shadow: none;
+  }
+}
+
+.#{$prefix}--modal--danger
+  .#{$prefix}--modal-footer
+  button.#{$prefix}--btn--secondary {
+  color: $rhm-color__status--DANGER;
+
+  &:focus,
+  &:active {
+    background-color: $rhm-color__red--50;
+  }
+
+  &:hover {
+    background-color: $rhm-color__red--50;
+  }
+}
+
+/**
+ * Modal Sizes
+ **/
+
+.#{$prefix}--modal-container--xs {
+  .#{$prefix}--modal-header,
+  .#{$prefix}--modal-content {
+    padding-left: $spacing-05;
+  }
+
+  .#{$prefix}--modal &.#{$prefix}--modal-container .#{$prefix}--modal-header {
+    min-height: $modal-close-size-mobile;
+    padding-right: $spacing-05;
+    padding-top: $spacing-05;
+  }
+
+  .#{$prefix}--modal-header__heading {
+    @include typography-base-heading;
+    @include font-size--b3;
+
+    font-weight: om--font-weight('medium');
+    padding-bottom: $spacing-04;
+  }
+
+  .#{$prefix}--modal-close {
+    top: 0;
+    right: 0;
+    height: $modal-close-size-mobile;
+    width: $modal-close-size-mobile;
+  }
+
+  .#{$prefix}--modal-content {
+    padding-top: $spacing-03;
+  }
+
+  .#{$prefix}--modal-footer {
+    flex-direction: column-reverse;
+    justify-content: flex-end;
+    padding: 0 $spacing-05 $spacing-07;
+  }
+
+  .#{$prefix}--modal-footer button.#{$prefix}--btn {
+    margin-bottom: $spacing-05;
+    margin-left: 0;
+
+    &:first-child {
+      margin-bottom: 0;
+    }
+  }
+}

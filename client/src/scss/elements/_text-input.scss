@@ -1,0 +1,53 @@
+.#{$prefix}--text-input,
+.#{$prefix}--password-input {
+  border-radius: $om-border-radius;
+  border: 1px solid $om-color-gray-lighter;
+  background-color: $om-color-white;
+
+  &:hover {
+    border-bottom: solid 1px $rh-color-blue;
+    border-radius: $om-border-radius $om-border-radius 0 0;
+  }
+
+  &:focus {
+    border-radius: $om-border-radius;
+    border: 1px solid $om-color-primary-blue;
+    outline: 0;
+  }
+
+  &:disabled {
+    color: $om-color__text-secondary;
+    background-color: $om-color-gray-lightest;
+    border-color: $om-color-gray-lightest;
+    border-radius: $om-border-radius;
+  }
+
+  .#{$prefix}--text-input.#{$prefix}--skeleton {
+    background-color: $om-color-gray-lightest;
+  }
+
+  .#{$prefix}--skeleton,
+  .#{$prefix}--skeleton:hover {
+    border: none;
+  }
+}
+
+.#{$prefix}--text-input__field-wrapper[data-invalid] {
+  outline: 0;
+}
+
+.#{$prefix}--text-input__field-wrapper .#{$prefix}--text-input--invalid {
+  outline: 0;
+  border: 1px solid $om-color-danger;
+  border-radius: $om-border-radius;
+}
+
+.#{$prefix}--tooltip__label {
+  color: $om-color-gray-darkest;
+}
+
+.#{$prefix}--tooltip__trigger svg {
+  width: rem(14px);
+  height: rem(14px);
+  fill: $om-color-gray-darkest;
+}

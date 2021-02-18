@@ -1,0 +1,29 @@
+.#{$om-prefix}-page-shell__container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.#{$om-prefix}-page-shell__side-nav {
+  display: none;
+  z-index: $om-z-index__side-nav;
+
+  @include carbon--breakpoint('lg') {
+    display: block;
+  }
+}
+
+.#{$prefix}--content.#{$om-prefix}-page-shell__content {
+  transform: none;
+  @include carbon--breakpoint-down('lg') {
+    margin-left: 0 !important;
+  }
+}
+
+.#{$om-prefix}-page-shell__content .#{$om-prefix}-breadcrumbs {
+  padding-bottom: $spacing-09;
+}
+
+.#{$om-prefix}-page-shell__container .#{$om-prefix}-footer {
+  margin-top: auto;
+}

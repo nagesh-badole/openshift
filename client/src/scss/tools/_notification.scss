@@ -1,0 +1,15 @@
+/// Create notification types
+/// @parameter {Hex} $color - The primary notification color .
+/// @parameter {Hex} $bg-color - The background color for the notification.
+/// @access private
+/// @group notification
+@mixin notification($color, $bg-color) {
+  background: $bg-color;
+  border: 1px solid $om-color-gray-lighter;
+  border-left: 3px solid $color;
+
+  .#{$prefix}--inline-notification__icon,
+  .#{$prefix}--toast-notification__icon {
+    fill: $color;
+  }
+}

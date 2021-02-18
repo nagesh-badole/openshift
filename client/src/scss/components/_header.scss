@@ -1,0 +1,158 @@
+// Carbon Header Component
+
+@mixin menu-item-focus {
+  &:after {
+    display: block;
+    content: ' ';
+    height: 4px;
+    width: 100%;
+    background-color: transparent;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    transition: background-color 250ms ease-out;
+  }
+}
+
+.#{$prefix}--header,
+.#{$prefix}--header__action {
+  height: $om-navigation-height;
+}
+
+.#{$prefix}--header__action {
+  border: 0;
+  border-top: 4px solid transparent;
+  width: auto;
+  padding: 0 $spacing-05;
+  margin-left: auto;
+  margin-right: 0;
+
+  &:hover {
+    background-color: transparent;
+    border-color: $om-color-primary;
+  }
+
+  &:focus {
+    border-color: $om-color-primary;
+    outline: 1px dotted $om-color-primary;
+  }
+
+  &--active,
+  &--active:hover {
+    background-color: $om-color__account-bg;
+    border-color: $om-color-primary;
+
+    & > svg {
+      fill: $om-color-gray-darkest;
+    }
+  }
+
+  & > svg {
+    height: 32px;
+    width: 32px;
+
+    @include carbon--breakpoint-up('lg') {
+      height: initial;
+      width: initial;
+    }
+  }
+
+  @include carbon--breakpoint-up('md') {
+    margin-right: $spacing-04;
+    padding: 0 $spacing-06;
+  }
+}
+
+.#{$prefix}--header {
+  background-color: $om-color__header-background;
+  border-bottom: 0;
+
+  @include carbon--breakpoint-up('lg') {
+    padding: 0 $spacing-07;
+  }
+}
+
+a.#{$prefix}--header__name {
+  padding: 0;
+  margin-left: $spacing-05;
+
+  @include carbon--breakpoint-up('md') {
+    margin-left: $spacing-07;
+    margin-right: rem(20px);
+  }
+
+  @include carbon--breakpoint-up('lg') {
+    margin-left: 0;
+  }
+}
+
+img.#{$om-prefix}-header__logo {
+  height: rem(35px);
+
+  @include carbon--breakpoint-up('md') {
+    height: rem(44px);
+  }
+}
+
+li.#{$om-prefix}-header__create-account {
+  align-items: center;
+  display: flex;
+}
+
+.#{$prefix}--header-panel,
+.#{$prefix}--side-nav--ux,
+.#{$prefix}--side-nav__overlay {
+  top: $om-navigation-height;
+}
+
+.#{$prefix}--header__global {
+  flex: 1 1 0;
+}
+
+.#{$prefix}--header__nav {
+  padding-left: 0;
+
+  &:before {
+    content: none;
+  }
+}
+
+// Header Menu Bar
+
+a.#{$prefix}--header__menu-item,
+a.#{$prefix}--header__menu-item[role='menuitem'],
+a.#{$prefix}--header__name {
+  @include typography-subheadline3;
+
+  color: $om-color-white;
+  border: 0;
+  border-top: 4px solid transparent;
+  transition: border-top-color 250ms ease-out;
+  position: relative;
+
+  &:focus {
+    border-color: transparent;
+    outline: 1px dotted $om-color-primary;
+  }
+}
+
+a.#{$prefix}--header__menu-item,
+a.#{$prefix}--header__menu-item[role='menuitem'] {
+  &:hover,
+  &:focus {
+    background-color: transparent;
+    border-top-color: $om-color-primary;
+  }
+}
+
+.#{$prefix}--header__menu-bar[role='menubar']
+  > li.#{$prefix}--header__menu-item--selected {
+  a.#{$prefix}--header__menu-item {
+    border-top-color: $om-color-primary;
+  }
+}
+
+a.#{$prefix}--header__menu-item {
+  padding: 0 rem(20px);
+}

@@ -1,0 +1,39 @@
+.#{$om-prefix}-empty-state {
+  max-width: rem(608px);
+  position: relative;
+  text-align: center;
+
+  @include carbon--breakpoint-up('md') {
+    text-align: left;
+
+    &--ALIGN-LEFT {
+      margin-left: 0;
+    }
+
+    &--ALIGN-RIGHT {
+      margin-right: 0;
+    }
+  }
+}
+
+.#{$om-prefix}-empty-state__image {
+  margin-bottom: $spacing-07;
+
+  & > img {
+    max-width: 100%;
+  }
+}
+
+.#{$om-prefix}-empty-state__cta {
+  margin-bottom: $spacing-05;
+  width: 100%;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  @include carbon--breakpoint-up('md') {
+    width: auto;
+    margin-bottom: 0;
+  }
+}

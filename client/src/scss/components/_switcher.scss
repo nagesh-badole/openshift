@@ -1,0 +1,77 @@
+// Carbon Switcher Component
+$om-switcher-padding: $spacing-05;
+
+.#{$prefix}--switcher,
+.#{$prefix}--header-panel {
+  background-color: $om-color-white;
+  border: 0;
+}
+
+.#{$prefix}--switcher {
+  padding: 0 0 $om-switcher-padding 0;
+}
+
+.#{$prefix}--header__action--active {
+  border-bottom-color: $om-color__account-bg;
+  background-color: $om-color__account-bg;
+}
+
+.#{$prefix}--switcher__item:nth-child(1) {
+  margin-top: 0;
+}
+
+.#{$prefix}--switcher__item,
+.#{$prefix}--switcher__item-link {
+  @include om--font-weight('regular');
+
+  height: inherit;
+}
+
+.#{$prefix}--switcher__item-link {
+  @include typography-subheadline3;
+
+  border: 2px solid transparent;
+  color: $om-color__text-secondary;
+  display: flex;
+  justify-content: space-between;
+  padding: $spacing-04 $spacing-07;
+
+  &:focus {
+    border-color: $om-color-primary-blue;
+    border-radius: $om-border-radius;
+    outline: none;
+  }
+
+  &:active {
+    background-color: $om-color-gray-lightest;
+    color: $om-color__text-default;
+  }
+
+  &:hover {
+    background-color: $om-color-gray-lightest;
+  }
+}
+
+.#{$prefix}--switcher__item-link:hover:not(.#{$prefix}--switcher__item-link--selected) {
+  background-color: $om-color-gray-lightest;
+  color: $om-color__text-secondary;
+}
+
+.#{$prefix}--switcher__item-link--selected {
+  background: $om-color-gray-lighterest;
+  position: relative;
+
+  &:before {
+    position: absolute;
+    background-color: $om-color-primary;
+    content: '';
+    height: 100%;
+    left: 0;
+    top: 0;
+    width: 4px;
+  }
+
+  .#{$prefix}--switcher__item-link {
+    color: $om-color__text-default;
+  }
+}

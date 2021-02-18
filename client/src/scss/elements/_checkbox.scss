@@ -1,0 +1,64 @@
+.#{$prefix}--checkbox-label::before {
+  border-color: $rhm-color__border;
+  border-radius: $om-border-radius;
+}
+
+.#{$prefix}--checkbox-label:hover::before {
+  background-color: $rhm-color__black--200;
+}
+
+.#{$prefix}--checkbox:checked + .#{$prefix}--checkbox-label::before,
+.#{$prefix}--checkbox:indeterminate + .#{$prefix}--checkbox-label::before,
+.#{$prefix}--checkbox-label[data-contained-checkbox-state='true']::before,
+.#{$prefix}--checkbox-label[data-contained-checkbox-state='mixed']::before {
+  background-color: $rhm-color__primary--BLUE;
+  border-color: $rhm-color__primary--BLUE;
+}
+
+.#{$prefix}--checkbox:checked:focus + .#{$prefix}--checkbox-label::before,
+.#{$prefix}--checkbox-label[data-contained-checkbox-state='true'].#{$prefix}--checkbox-label__focus::before {
+  background-color: $rhm-color__primary--BLUE;
+}
+
+.#{$prefix}--checkbox:disabled + .#{$prefix}--checkbox-label,
+.#{$prefix}--checkbox-label[data-contained-checkbox-disabled='true'] {
+  color: $rhm-color__black--500;
+}
+
+.#{$prefix}--checkbox:disabled + .#{$prefix}--checkbox-label::before,
+.#{$prefix}--checkbox-label[data-contained-checkbox-disabled='true']::before {
+  border-color: $rhm-color__disabled;
+}
+
+.#{$prefix}--checkbox:disabled + .#{$prefix}--checkbox-label:hover::before {
+  background-color: $rhm-color__white;
+}
+
+.#{$prefix}--checkbox:checked:disabled + .#{$prefix}--checkbox-label::before,
+.#{$prefix}--checkbox:checked:disabled
+  + .#{$prefix}--checkbox-label:hover::before,
+.#{$prefix}--checkbox:indeterminate:disabled
+  + .#{$prefix}--checkbox-label::before,
+.#{$prefix}--checkbox-label[data-contained-checkbox-state='true'][data-contained-checkbox-disabled='true']::before,
+.#{$prefix}--checkbox-label[data-contained-checkbox-state='mixed'][data-contained-checkbox-disabled='true']::before {
+  background-color: $rhm-color__disabled;
+  border-color: $rhm-color__disabled;
+}
+
+.#{$prefix}--form-item.#{$prefix}--checkbox-wrapper {
+  margin-bottom: $spacing-03;
+
+  &:last-of-type {
+    margin-bottom: 0;
+  }
+}
+
+// Skeleton
+.#{$om-prefix}-checkbox-skeleton::before {
+  background-color: $rhm-color__black--200;
+  border-color: $rhm-color__black--200;
+}
+.#{$om-prefix}-checkbox-skeleton .bx--checkbox-label-text.bx--skeleton {
+  border-radius: 0;
+  height: rem(8px);
+}

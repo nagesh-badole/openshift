@@ -1,0 +1,398 @@
+/// Font family fallbacks for: Red Hat Text, Red Hat Display, IBM Plex Mono, IBM Plex Sans
+/// @type Map
+/// @access public
+$om--font-families: (
+  'mono':
+    unquote(
+      "'Overpass Mono', 'Monaco', 'Consolas', 'Courier New', Courier, monospace"
+    ),
+  'plex-sans': unquote("'IBM Plex Sans', 'Helvetica Neue', Arial, sans-serif"),
+  'text': unquote("'Red Hat Text', Arial, sans-serif"),
+  'display': unquote("'Red Hat Display', Arial, sans-serif"),
+);
+
+/// Get the font-family for an Red Hat Marketplace font
+/// @param {String} $name
+/// @return {String}
+/// @access public
+@function om--font-family($name) {
+  @return map-get($om--font-families, $name);
+}
+
+/// Include the `font-family` definition for the given name in your selector
+/// @param {String} $name
+/// @access public
+@mixin om--font-family($name) {
+  font-family: om--font-family($name);
+}
+
+/// Suggested font weights to be used in product
+/// @type Map
+/// @access public
+$om--font-weights: (
+  'regular': 400,
+  'medium': 500,
+  'bold': 700,
+  'black': 900,
+);
+
+/// Retrieve the font-weight value for a given name
+/// @param {String} $weight
+/// @return {Number}
+/// @access public
+@function om--font-weight($weight) {
+  @return map-get($om--font-weights, $weight);
+}
+
+/// Set the `font-weight` property with the value for a given name
+/// @param {String} $weight
+/// @access public
+@mixin om--font-weight($weight) {
+  font-weight: om--font-weight($weight);
+}
+
+@mixin typography-base-heading {
+  @include om--font-family('display');
+
+  color: $om-color__text-default;
+  font-weight: om--font-weight('regular');
+  letter-spacing: 0;
+}
+
+@mixin typography-base-text {
+  @include om--font-family('text');
+
+  color: $om-color__text-default;
+  font-weight: om--font-weight('regular');
+  letter-spacing: 0;
+}
+
+@mixin typography-base-code {
+  @include om--font-family('mono');
+
+  color: $om-color__text-default;
+  font-weight: om--font-weight('regular');
+  letter-spacing: 0;
+}
+
+// Common Font-sizes
+
+@mixin font-size--h1 {
+  font-size: rem(60px);
+  line-height: rem(72px);
+}
+
+@mixin font-size--h2 {
+  font-size: rem(54px);
+  line-height: rem(65px);
+}
+
+@mixin font-size--h3 {
+  font-size: rem(48px);
+  line-height: rem(58px);
+}
+
+@mixin font-size--h4 {
+  font-size: rem(42px);
+  line-height: rem(50px);
+}
+
+@mixin font-size--h5 {
+  font-size: rem(38px);
+  line-height: rem(49px);
+}
+
+@mixin font-size--h6 {
+  font-size: rem(34px);
+  line-height: rem(44px);
+}
+
+@mixin font-size--h7 {
+  font-size: rem(30px);
+  line-height: rem(39px);
+}
+
+@mixin font-size--h8 {
+  font-size: rem(28px);
+  line-height: rem(36px);
+}
+
+@mixin font-size--h9 {
+  font-size: rem(24px);
+  line-height: rem(31px);
+}
+
+@mixin font-size--h10 {
+  font-size: rem(20px);
+  line-height: rem(30px);
+}
+
+@mixin font-size--b3 {
+  font-size: rem(18px);
+  line-height: rem(27px);
+}
+
+@mixin font-size--b1 {
+  font-size: rem(16px);
+  line-height: rem(24px);
+}
+
+@mixin font-size--b2 {
+  font-size: rem(14px);
+  line-height: rem(21px);
+}
+
+@mixin font-size--b4 {
+  font-size: rem(12px);
+  line-height: rem(18px);
+}
+
+// Typography
+
+@mixin typography-h1 {
+  @include typography-base-heading;
+  @include font-size--h3;
+
+  @include carbon--breakpoint-up('md') {
+    @include font-size--h2;
+  }
+
+  @include carbon--breakpoint-up('lg') {
+    @include font-size--h1;
+  }
+}
+
+@mixin typography-h2 {
+  @include typography-base-heading;
+  @include font-size--h4;
+
+  @include carbon--breakpoint-up('md') {
+    @include font-size--h3;
+  }
+
+  @include carbon--breakpoint-up('lg') {
+    @include font-size--h2;
+  }
+}
+
+@mixin typography-h3 {
+  @include typography-base-heading;
+  @include font-size--h5;
+
+  @include carbon--breakpoint-up('md') {
+    @include font-size--h4;
+  }
+
+  @include carbon--breakpoint-up('lg') {
+    @include font-size--h3;
+  }
+}
+
+@mixin typography-h4 {
+  @include typography-base-heading;
+  @include font-size--h6;
+
+  @include carbon--breakpoint-up('md') {
+    @include font-size--h5;
+  }
+
+  @include carbon--breakpoint-up('lg') {
+    @include font-size--h4;
+  }
+}
+
+@mixin typography-h5 {
+  @include typography-base-heading;
+  @include font-size--h7;
+
+  font-weight: om--font-weight('medium');
+
+  @include carbon--breakpoint-up('md') {
+    @include font-size--h6;
+  }
+
+  @include carbon--breakpoint-up('lg') {
+    @include font-size--h5;
+  }
+}
+
+@mixin typography-h6 {
+  @include typography-base-heading;
+  @include font-size--h8;
+
+  font-weight: om--font-weight('medium');
+
+  @include carbon--breakpoint-up('md') {
+    @include font-size--h7;
+  }
+
+  @include carbon--breakpoint-up('lg') {
+    @include font-size--h6;
+  }
+}
+
+@mixin typography-h7 {
+  @include typography-base-heading;
+  @include font-size--h9;
+
+  font-weight: om--font-weight('medium');
+
+  @include carbon--breakpoint-up('md') {
+    @include font-size--h8;
+  }
+
+  @include carbon--breakpoint-up('lg') {
+    @include font-size--h7;
+  }
+}
+
+@mixin typography-h8 {
+  @include typography-base-heading;
+  @include font-size--h10;
+
+  font-weight: om--font-weight('medium');
+
+  @include carbon--breakpoint-up('md') {
+    @include font-size--h9;
+  }
+
+  @include carbon--breakpoint-up('lg') {
+    @include font-size--h8;
+  }
+}
+
+@mixin typography-h9 {
+  @include typography-base-heading;
+  @include font-size--b3;
+
+  font-weight: om--font-weight('medium');
+
+  @include carbon--breakpoint-up('md') {
+    @include font-size--h10;
+  }
+
+  @include carbon--breakpoint-up('lg') {
+    @include font-size--h9;
+  }
+}
+
+@mixin typography-h10 {
+  @include typography-base-heading;
+  @include font-size--b1;
+
+  font-weight: om--font-weight('medium');
+
+  @include carbon--breakpoint-up('md') {
+    @include font-size--b3;
+  }
+
+  @include carbon--breakpoint-up('lg') {
+    @include font-size--h10;
+  }
+}
+
+// Subheadline
+
+@mixin typography-subheadline1 {
+  @include typography-base-text;
+  @include font-size--b3;
+
+  @include carbon--breakpoint-up('md') {
+    @include font-size--h10;
+  }
+}
+
+@mixin typography-subheadline2 {
+  @include typography-base-heading;
+  @include font-size--b3;
+
+  font-weight: om--font-weight('medium');
+
+  @include carbon--breakpoint-up('md') {
+    @include font-size--h10;
+  }
+}
+
+@mixin typography-subheadline3 {
+  @include typography-base-heading;
+  @include font-size--b1;
+
+  font-weight: om--font-weight('medium');
+}
+
+@mixin typography-subheadline4 {
+  @include typography-base-text;
+  @include font-size--b2;
+
+  font-weight: om--font-weight('medium');
+}
+
+// Text
+
+@mixin typography-b1 {
+  @include typography-base-text;
+  @include font-size--b1;
+}
+
+@mixin typography-b2 {
+  @include typography-base-text;
+  @include font-size--b2;
+}
+
+@mixin typography-b3 {
+  @include typography-base-text;
+  @include font-size--b3;
+}
+
+// Code
+
+@mixin typography-code1 {
+  @include typography-base-code;
+  @include font-size--b4;
+}
+
+@mixin typography-code2 {
+  @include typography-base-code;
+  @include font-size--b2;
+}
+
+// Helper/Legal
+
+@mixin typography-helper {
+  @include typography-base-text;
+  @include font-size--b4;
+}
+
+// Typography Component specific mixins
+
+@mixin typography-sh1 {
+  color: $om-color__text-default;
+  font-weight: om--font-weight('medium');
+  font-size: rem(28px);
+  letter-spacing: 0;
+  line-height: rem(36px);
+}
+
+@mixin typography-sh2 {
+  color: $om-color__text-default;
+  font-size: rem(24px);
+  font-weight: om--font-weight('regular');
+  letter-spacing: 0;
+  line-height: rem(30px);
+}
+
+@mixin typography-sh3 {
+  color: $om-color__text-default;
+  font-size: rem(20px);
+  font-weight: om--font-weight('regular');
+  letter-spacing: 0;
+  line-height: rem(26px);
+}
+
+@mixin typography-sh4 {
+  color: $om-color__text-default;
+  font-size: rem(18px);
+  font-weight: om--font-weight('regular');
+  letter-spacing: 0;
+  line-height: rem(24px);
+}

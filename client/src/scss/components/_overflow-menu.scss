@@ -1,0 +1,33 @@
+$overflow-bg: $om-color-white;
+
+.#{$prefix}--overflow-menu.#{$prefix}--overflow-menu--open,
+.#{$prefix}--overflow-menu.#{$prefix}--overflow-menu--open
+  .#{$prefix}--overflow-menu__trigger {
+  background-color: $overflow-bg;
+}
+
+.#{$prefix}--overflow-menu-options {
+  background-color: $overflow-bg;
+}
+
+.#{$prefix}--overflow-menu-options::after {
+  background-color: $overflow-bg;
+}
+
+.#{$prefix}--overflow-menu-options__option:hover {
+  background-color: $om-color-gray-lightest;
+}
+
+.#{$prefix}--overflow-menu-options__option
+  .#{$prefix}--overflow-menu-options__btn {
+  color: $om-color-gray-darker;
+}
+
+.#{$prefix}--overflow-menu-options__option--disabled
+  .#{$prefix}--overflow-menu-options__btn {
+  color: $om-color-gray-dark;
+}
+
+.#{$prefix}--overflow-menu-options__option--disabled {
+  background-color: $om-color-gray-lighter;
+}

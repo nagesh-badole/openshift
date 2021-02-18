@@ -1,0 +1,10 @@
+.#{$om-prefix}-leadspace {
+  background-color: $om-color-gray-lightest;
+}
+
+.#{$om-prefix}-leadspace--PAGE-HEADER {
+  background: $om-color-gray-darkerest
+    url('https://rhm-assets.s3.us-east.cloud-object-storage.appdomain.cloud/sub-page-header-background.png')
+    no-repeat top right;
+  background-size: auto rem(230px);
+}

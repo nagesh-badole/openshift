@@ -1,0 +1,15 @@
+// The global settings file contains any project-wide variables; things that
+// need to be made available to the entire codebase.
+
+// Theme Prefix
+$prefix: 'bx' !default;
+$om-prefix: 'om' !default;
+
+// Tabs Component Specific variables
+$tab-underline-color-hover: 3px solid $om-color-secondary-red !default !global;
+
+// Navigation
+$om-navigation-height: 5rem; // 80px
+
+// Border-radius
+$om-border-radius: 3px;

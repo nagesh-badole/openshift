@@ -1,0 +1,12 @@
+$directions: top, right, bottom, left;
+$spacing: $spacing-01, $spacing-02, $spacing-03, $spacing-04, $spacing-05,
+  $spacing-06, $spacing-07, $spacing-08, $spacing-09, $spacing-10, $spacing-11,
+  $spacing-12;
+
+.#{$om-prefix}-margin {
+  @include generate-spacing($directions, $spacing, 'margin');
+}
+
+.#{$om-prefix}-padding {
+  @include generate-spacing($directions, $spacing, 'padding');
+}

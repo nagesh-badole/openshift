@@ -1,0 +1,75 @@
+.#{$prefix}--btn {
+  @include base-button;
+
+  font-family: om--font-family('text');
+  font-weight: om--font-weight('regular');
+
+  &--primary {
+    @include button-primary-alternative;
+  }
+
+  &--primary-alt {
+    @include button-primary-alternative;
+  }
+
+  &--secondary {
+    @include button-secondary-alternative;
+  }
+
+  &--secondary-alt {
+    @include button-secondary-alternative;
+  }
+
+  &--tertiary {
+    @include button-tertiary;
+  }
+
+  &--danger {
+    @include button-danger;
+  }
+
+  &--ghost {
+    @include button-ghost;
+  }
+
+  /// Utility class to render a button as a block element.
+  /// @example .bx--btn--primary .bx--btn--block
+  /// @access public
+  /// @group @symposium/ui-styles
+  &--block {
+    width: 100%;
+  }
+}
+
+.#{$prefix}--btn-set {
+  flex-direction: column;
+
+  @include carbon--breakpoint-up('md') {
+    flex-direction: row;
+  }
+}
+
+.#{$prefix}--btn-set > .#{$prefix}--btn {
+  margin-bottom: $spacing-05;
+  max-width: 100%;
+
+  &:last-child {
+    margin-bottom: 0;
+    margin-right: 0;
+  }
+
+  @include carbon--breakpoint-up('md') {
+    margin-bottom: 0;
+    margin-right: $spacing-05;
+    max-width: 12.25rem;
+  }
+}
+
+.#{$prefix}--btn.#{$prefix}--skeleton:before {
+  border-radius: $om-border-radius;
+}
+
+.#{$prefix}--btn--secondary.#{$om-prefix}-btn--TRANSPARENT,
+.#{$prefix}--btn--tertiary.#{$om-prefix}-btn--TRANSPARENT {
+  background-color: transparent;
+}

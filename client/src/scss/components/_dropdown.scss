@@ -1,0 +1,170 @@
+.#{$prefix}--dropdown {
+  background-color: $om-color-white;
+  border-radius: $om-border-radius;
+  border: 0;
+
+  &:hover {
+    background-color: transparent;
+  }
+
+  .#{$prefix}--label {
+    color: $om-color-gray-darkest;
+  }
+
+  .#{$prefix}--list-box__field {
+    border-radius: $om-border-radius;
+    border: 1px solid $om-color-gray-lighter;
+
+    &:focus {
+      border: 1px solid $om-color-primary-blue;
+      outline: none;
+    }
+  }
+}
+
+.#{$prefix}--list-box[data-invalid] {
+  outline: none;
+}
+
+.#{$prefix}--list-box__field {
+  .#{$prefix}--list-box:not([data-invalid]) &:hover:not(:focus):not(:active) {
+    border-bottom: 1px solid $rh-color-blue;
+    border-radius: $om-border-radius $om-border-radius 0 0;
+    background-color: transparent;
+  }
+
+  .#{$prefix}--list-box[data-invalid] & {
+    border: 1px solid $om-color-danger;
+  }
+}
+
+.#{$prefix}--dropdown.#{$prefix}--dropdown--open {
+  .#{$prefix}--list-box__field {
+    &:focus {
+      border-color: transparent;
+      outline: none;
+    }
+
+    border-color: transparent;
+    border-radius: 0;
+  }
+}
+
+.#{$prefix}--list-box--expanded .#{$prefix}--list-box__menu {
+  border-top: 1px solid $om-color-gray-lightest;
+}
+
+.#{$prefix}--list-box__menu {
+  background-color: $om-color-white;
+}
+
+.#{$prefix}--list-box__menu-icon svg {
+  fill: $om-color-gray-darkest;
+}
+
+.#{$prefix}--list-box__menu-item {
+  border: 1px solid transparent;
+  color: $om-color__text-secondary;
+  height: auto;
+}
+
+.#{$prefix}--list-box__menu-item:hover,
+.#{$prefix}--list-box__menu-item--highlighted {
+  background-color: $om-color-gray-lightest;
+  color: $om-color__text-secondary;
+}
+
+.#{$prefix}--list-box__menu-item--highlighted
+  .#{$prefix}--list-box__menu-item__option,
+.#{$prefix}--list-box__menu-item:hover
+  .#{$prefix}--list-box__menu-item__option {
+  color: $om-color__text-secondary;
+}
+
+.#{$prefix}--list-box__menu-item:hover,
+.#{$prefix}--list-box--light .#{$prefix}--list-box__menu-item--active,
+.#{$prefix}--list-box--light .#{$prefix}--list-box__menu-item:active,
+.#{$prefix}--list-box__menu-item--active,
+.#{$prefix}--list-box__menu-item:focus,
+.#{$prefix}--list-box__menu-item:active {
+  background-color: $om-color-white;
+  border-color: $om-color-primary-blue;
+  border-radius: $om-border-radius;
+  color: $om-color__text-default;
+}
+
+.#{$prefix}--list-box.#{$prefix}--dropdown--disabled
+  .#{$prefix}--list-box__field:not(:focus),
+.#{$prefix}--list-box.#{$prefix}--dropdown--disabled
+  .#{$prefix}--list-box__field:hover:not(:focus):not(:active) {
+  background-color: $om-color-gray-lightest;
+  border-color: $om-color-gray-lightest;
+}
+
+.#{$prefix}--list-box.#{$prefix}--dropdown--disabled
+  .#{$prefix}--list-box__field:focus {
+  background-color: $om-color-gray-lightest;
+}
+
+/**
+ * Skeleton
+ */
+.#{$prefix}--skeleton,
+.#{$prefix}--skeleton:before {
+  background: $om-color-gray-lightest;
+  border-radius: $om-border-radius;
+}
+
+.#{$prefix}--skeleton--inline {
+  height: rem(8px);
+}
+
+/**
+ * Inline Dropdown
+ */
+
+.#{$prefix}--list-box.#{$prefix}--list-box--inline .#{$prefix}--list-box__field,
+.#{$prefix}--list-box.#{$prefix}--list-box--inline.#{$prefix}--list-box--expanded
+  .#{$prefix}--list-box__field[aria-expanded='true'] {
+  border: 1px solid transparent;
+}
+
+.#{$prefix}--list-box.#{$prefix}--list-box--inline
+  .#{$prefix}--list-box__field:focus {
+  border-color: $om-color-primary-blue;
+}
+
+.#{$prefix}--dropdown__wrapper--inline
+  .#{$prefix}--list-box--disabled
+  .#{$prefix}--list-box__menu-icon
+  > svg {
+  fill: $om-color-disabled-light;
+}
+
+.#{$prefix}--list-box.#{$prefix}--list-box--inline:hover {
+  background-color: $om-color-white;
+}
+
+.#{$prefix}--list-box--disabled.#{$prefix}--list-box--inline
+  .#{$prefix}--list-box__label {
+  color: $om-color-disabled-light;
+}
+
+.#{$prefix}--list-box--disabled.#{$prefix}--list-box--inline
+  .#{$prefix}--list-box__field:not(:focus),
+.#{$prefix}--list-box--disabled.#{$prefix}--list-box--inline
+  .#{$prefix}--list-box__field:hover:not(:focus):not(:active) {
+  background-color: transparent;
+  border: 1px solid transparent;
+}
+
+.#{$prefix}--list-box--disabled.#{$prefix}--list-box--inline
+  .#{$prefix}--list-box__field:focus {
+  background-color: transparent;
+}
+
+.#{$prefix}--list-box__field {
+  .#{$prefix}--list-box[data-invalid].#{$prefix}--list-box--inline & {
+    border: 1px solid $om-color-danger;
+  }
+}

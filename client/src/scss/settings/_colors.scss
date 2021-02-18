@@ -1,0 +1,259 @@
+// Color Scales
+// -- Red Scale
+$rhm-color__red--500: #2c0000;
+$rhm-color__red--400: #470000;
+$rhm-color__red--300: #7d1007;
+$rhm-color__red--200: #a30000;
+$rhm-color__red--100: #c9190b;
+$rhm-color__red--50: #faeae8;
+
+$rhm-color__red--BRAND: #ee0000;
+$rhm-color__red--BRAND-HOVER: #d40000;
+
+// -- Blue Scale
+$rhm-color__blue--700: #001223;
+$rhm-color__blue--600: #002952;
+$rhm-color__blue--500: #004080;
+$rhm-color__blue--400: #0066cc;
+$rhm-color__blue--300: #2b9af3;
+$rhm-color__blue--200: #73bcf7;
+$rhm-color__blue--100: #bee1f4;
+$rhm-color__blue--50: #e7f1fa;
+
+// -- Light Blue Scale
+$rhm-color__light-blue--700: #002d39;
+$rhm-color__light-blue--600: #005c73;
+$rhm-color__light-blue--500: #008bad;
+$rhm-color__light-blue--400: #00b9e4;
+$rhm-color__light-blue--300: #35caed;
+$rhm-color__light-blue--200: #7cdbf3;
+$rhm-color__light-blue--100: #beedf9;
+
+// -- Green Scale
+$rhm-color__green--700: #0f280d;
+$rhm-color__green--600: #1e4f18;
+$rhm-color__green--500: #3e8635;
+$rhm-color__green--400: #5ba352;
+$rhm-color__green--300: #6ec664;
+$rhm-color__green--200: #95d58e;
+$rhm-color__green--100: #bde5b8;
+$rhm-color__green--50: #f3faf2;
+
+// -- Light Green Scale
+$rhm-color__light-green--700: #253600;
+$rhm-color__light-green--600: #486b00;
+$rhm-color__light-green--500: #6ca100;
+$rhm-color__light-green--400: #92d400;
+$rhm-color__light-green--300: #ace12e;
+$rhm-color__light-green--200: #c8eb79;
+$rhm-color__light-green--100: #e4f5bc;
+
+// -- Cyan Scale
+$rhm-color__cyan--700: #000f0f;
+$rhm-color__cyan--600: #002323;
+$rhm-color__cyan--500: #003737;
+$rhm-color__cyan--400: #005f60;
+$rhm-color__cyan--300: #009596;
+$rhm-color__cyan--200: #73c5c5;
+$rhm-color__cyan--100: #a2d9d9;
+$rhm-color__cyan--50: #f2f9f9;
+
+// -- Purple Scale
+$rhm-color__purple--700: #1f0066;
+$rhm-color__purple--600: #40199a;
+$rhm-color__purple--500: #6753ac;
+$rhm-color__purple--400: #8476d1;
+$rhm-color__purple--300: #a18fff;
+$rhm-color__purple--200: #b2a3ff;
+$rhm-color__purple--100: #cbc1ff;
+
+// -- Orange Scale
+$rhm-color__orange--700: #3b1f00;
+$rhm-color__orange--600: #773d00;
+$rhm-color__orange--500: #8f4700;
+$rhm-color__orange--400: #c46100;
+$rhm-color__orange--300: #ec7a08;
+$rhm-color__orange--200: #ef9234;
+$rhm-color__orange--100: #f4b678;
+
+// -- Gold Scale
+$rhm-color__gold--700: #3d2c00;
+$rhm-color__gold--600: #795600;
+$rhm-color__gold--500: #c58c00;
+$rhm-color__gold--400: #f0ab00;
+$rhm-color__gold--300: #f4c145;
+$rhm-color__gold--200: #f6d173;
+$rhm-color__gold--100: #f9e0a2;
+$rhm-color__gold--50: #fdf7e7;
+
+// -- Grey Scale
+$rhm-color__black: #000000;
+$rhm-color__black--1000: #030303;
+$rhm-color__black--900: #151515;
+$rhm-color__black--850: #212427;
+$rhm-color__black--800: #3c3f42;
+$rhm-color__black--700: #4f5255;
+$rhm-color__black--600: #6a6e73;
+$rhm-color__black--500: #8a8d90;
+$rhm-color__black--400: #b8bbbe;
+$rhm-color__black--300: #d2d2d2;
+$rhm-color__black--200: #f0f0f0;
+$rhm-color__black--150: #f5f5f5;
+$rhm-color__black--100: #fafafa;
+$rhm-color__white: #ffffff;
+
+// -- Primary
+
+$rhm-color__primary: $rhm-color__red--BRAND;
+$rhm-color__primary--BLUE: $rhm-color__blue--400;
+$rhm-color__primary--DARK: $rhm-color__black;
+$rhm-color__primary--LIGHT: $rhm-color__white;
+
+// -- Secondary
+
+$rhm-color__secondary--BLUE: $rhm-color__blue--300;
+$rhm-color__secondary--RED: #ce2615;
+
+// -- Interactive
+
+$rhm-color__red--BRAND-VISITED: $rhm-color__red--BRAND;
+$rhm-color__red--BRAND-ACTIVE: $rhm-color__red--BRAND-HOVER;
+$rhm-color__red--BRAND-FOCUS: $rhm-color__red--BRAND;
+
+$rhm-color__blue--BRAND-HOVER: $rhm-color__blue--500;
+$rhm-color__blue--BRAND-ACTIVE: $rhm-color__blue--500;
+$rhm-color__blue--BRAND-FOCUS: $rhm-color__blue--400;
+
+$rhm-color__border: $rhm-color__black--300;
+
+$rhm-color__link: $rhm-color__blue--400;
+$rhm-color__link--VISITED: $rhm-color__blue--400;
+
+$rhm-color__disabled: $rhm-color__black--200;
+$rhm-color__disabled--DARK: $rhm-color__black--400;
+
+// -- Status
+
+$rhm-color__status--DEFAULT: $rhm-color__cyan--300;
+$rhm-color__status--DANGER: $rhm-color__red--100;
+$rhm-color__status--SUCCESS: $rhm-color__green--500;
+$rhm-color__status--WARNING: $rhm-color__gold--400;
+$rhm-color__status--CAUTION: $rhm-color__gold--50;
+$rhm-color__status--INFO: $rhm-color__blue--300;
+
+// -- Alerts
+
+$rhm-color__alert-background: $rhm-color__cyan--50;
+$rhm-color__alert-text: $rhm-color__cyan--600;
+$rhm-color__alert: $rhm-color__status--DEFAULT;
+
+$rhm-color__alert-background--DANGER: $rhm-color__red--50;
+$rhm-color__alert-text--DANGER: $rhm-color__red--300;
+$rhm-color__alert--DANGER: $rhm-color__status--DANGER;
+
+$rhm-color__alert-background--SUCCESS: $rhm-color__green--50;
+$rhm-color__alert-text--SUCCESS: $rhm-color__green--600;
+$rhm-color__alert--SUCCESS: $rhm-color__status--SUCCESS;
+
+$rhm-color__alert-background--WARNING: $rhm-color__gold--50;
+$rhm-color__alert-text--WARNING: $rhm-color__gold--600;
+$rhm-color__alert--WARNING: $rhm-color__status--WARNING;
+
+$rhm-color__alert-background--INFO: $rhm-color__blue--50;
+$rhm-color__alert-text--INFO: $rhm-color__blue--600;
+$rhm-color__alert--INFO: $rhm-color__status--INFO;
+
+// -- Typography
+$rhm-color__typography: $rhm-color__black--900;
+$rhm-color__typography--INVERSE: $rhm-color__white;
+$rhm-color__typography--SECONDARY: $rhm-color__black--600;
+
+// -- Header
+
+$rhm-color__account-bg: $rhm-color__white;
+$rhm-color__account-item-hover: #393939;
+$rhm-color__active-account-bg: #4d4d4d;
+$rhm-color__active-account-item-bg: #4d4d4d;
+$rhm-color__inactive-text: $rhm-color__black--300;
+$rhm-color__active-text: $rhm-color__white;
+$rhm-color__switcher-background: $rhm-color__black--800;
+$rhm-color__header-background: $rhm-color__black--900;
+
+// THESE ARE NOW DEPRECATED:
+// Please take the next major release to migrate to the new color variables.
+// Current release: 6.x.x
+// Removal in release: 8.0.0
+$om-color-black: $rhm-color__black; // Use: background, marketing elements
+$om-color-gray-darkest: $rhm-color__black--900; // Use: text, background
+$om-color-gray-darkerest: $rhm-color__black--800; // Use: text, background, marketing elements
+$om-color-gray-darker: #4d4d4d; // Use: text, background, marketing elements
+$om-color-gray-dark: $rhm-color__black--600; // Use: text, gray on light background
+$om-color-gray-medium: #8b8b8b;
+$om-color-gray: #aaaaaa; // Use: gray on light background
+$om-color-gray-light: #cccccc; // Use: gray on light background
+$om-color-gray-lighter: $rhm-color__black--300; // Use: border color, disabled states
+$om-color-gray-lightest: $rhm-color__black--200; // Use: gray background
+$om-color-gray-lighterest: $rhm-color__black--100; // Use: gray background
+$om-color-white: $rhm-color__white; // Use: background, text on dark background
+
+$rh-color-red-lightest: #fddbdb;
+$rh-color-red-lighter: #fa6d6d;
+$rh-color-red-light: #f56d6d;
+$rh-color-red: $rhm-color__red--BRAND; // Use: call to action
+$rh-color-red-medium: $rhm-color__red--BRAND-HOVER; // Use: call to action hover
+$rh-color-red-dark: #8f0000;
+$rh-color-red-darker: #5f0000;
+
+$rh-color-blue-lighter: $rhm-color__blue--200; // Use: link on dark background
+$rh-color-blue-light: $rhm-color__blue--300; // Use: link-focus and hover on dark background
+$rh-color-blue: $rhm-color__blue--400; // Use: links, buttons
+$rh-color-blue-dark: $rhm-color__blue--500; // Use: hover & focus of links and buttons
+
+$om-color-primary: $rhm-color__red--BRAND;
+$om-color-primary-blue: $rhm-color__blue--400;
+$om-color-primary-dark: $rhm-color__black;
+$om-color-primary-light: $rhm-color__white;
+
+$om-color-secondary-blue: $rhm-color__blue--300;
+$om-color-secondary-red: #ce2615;
+
+$om-color-border: $rhm-color__black--300;
+$om-color-link: $rhm-color__blue--400;
+$om-color-visited-link: $rhm-color__blue--400;
+$om-color-visited: $rhm-color__red--BRAND;
+$om-color-hover: $rhm-color__red--BRAND-HOVER;
+$om-color-active: $rhm-color__red--BRAND-HOVER;
+$om-color-focus: $rhm-color__red--BRAND;
+
+$om-color-hover-2: $rhm-color__blue--500;
+$om-color-active-2: $rhm-color__blue--500;
+$om-color-focus-2: $rhm-color__blue--400;
+
+$om-color-disabled: $rhm-color__black--200;
+$om-color-disabled-light: $rhm-color__black--400;
+$om-color-danger: $rhm-color__red--100;
+$om-color-danger__text: $rhm-color__red--300;
+$om-color-caution: $rhm-color__gold--50;
+$om-color-caution__text: $rhm-color__gold--600;
+$om-color-success: $rhm-color__green--500;
+$om-color-success__text: $rhm-color__green--600;
+$om-color-warning: $rhm-color__gold--400;
+$om-color-warning__text: $rhm-color__gold--600;
+$om-color-info: $rhm-color__blue--300;
+$om-color-info__text: $rhm-color__blue--600;
+$om-color-alert: $rhm-color__cyan--300;
+$om-color-alert__text: $rhm-color__cyan--600;
+
+$om-color__text-default: $rhm-color__black--900;
+$om-color__text-inverse: $rhm-color__white;
+$om-color__text-secondary: $rhm-color__black--600;
+$om-color__text-tertiary: $rhm-color__black--600;
+
+$om-color__account-bg: $rhm-color__white;
+$om-color__account-item-hover: #393939;
+$om-color__active-account-bg: #4d4d4d;
+$om-color__active-account-item-bg: #4d4d4d;
+$om-color__inactive-text: $rhm-color__black--300;
+$om-color__active-text: $rhm-color__white;
+$om-color__switcher-background: $rhm-color__black--800;
+$om-color__header-background: $rhm-color__black--900;

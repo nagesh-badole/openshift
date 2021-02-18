@@ -1,0 +1,11 @@
+@mixin generate-spacing($directions, $spacing, $spacingType) {
+  @each $direction in $directions {
+    &--#{to_upper_case($direction)} {
+      @for $i from 1 through length($spacing) {
+        &--#{$i} {
+          #{$spacingType}-#{$direction}: nth($spacing, $i);
+        }
+      }
+    }
+  }
+}

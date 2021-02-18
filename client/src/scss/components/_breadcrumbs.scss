@@ -1,0 +1,16 @@
+.#{$om-prefix}-breadcrumbs {
+  padding: $spacing-05 0;
+}
+
+.#{$prefix}--breadcrumb-item {
+  margin-bottom: $spacing-01;
+  display: inline-flex;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  @include carbon--breakpoint-up('md') {
+    margin-bottom: 0;
+  }
+}

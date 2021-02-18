@@ -1,0 +1,215 @@
+.#{$prefix}--snippet--single,
+.#{$prefix}--snippet--multi {
+  border: 1px solid $rhm-color__border;
+  border-radius: $om-border-radius;
+}
+
+.#{$prefix}--snippet--multi {
+  background-color: $ui-02;
+  padding: 1rem 0.5rem 0.5rem 1rem;
+}
+
+.#{$prefix}--snippet--single .#{$prefix}--copy-btn {
+  background-color: transparent;
+  top: -1px;
+  right: -1px;
+  border: 1px solid $rhm-color__border;
+  border-left: 0;
+  border-radius: 0 $om-border-radius $om-border-radius 0;
+}
+
+.#{$prefix}--snippet--multi .#{$prefix}--copy-btn {
+  background-color: transparent;
+  top: -1px;
+  right: -1px;
+  border-left: 0;
+  border-radius: 0 $om-border-radius $om-border-radius 0;
+  position: relative;
+}
+
+.#{$prefix}--snippet--single .#{$prefix}--copy-btn:hover {
+  background-color: $rhm-color__disabled;
+  border: 1px solid $rhm-color__border;
+  border-left: 0;
+  border-radius: $om-border-radius;
+}
+
+.#{$prefix}--snippet--multi .#{$prefix}--copy-btn:hover {
+  background-color: $rhm-color__disabled;
+  border-left: 0;
+  border-radius: $om-border-radius;
+}
+
+.#{$prefix}--snippet--single .#{$prefix}--copy-btn:active,
+.#{$prefix}--snippet--multi .#{$prefix}--copy-btn:active,
+.#{$prefix}--snippet--single .#{$prefix}--copy-btn:focus,
+.#{$prefix}--snippet--multi .#{$prefix}--copy-btn:focus {
+  border: 2px solid $rhm-color__primary--BLUE;
+  border-radius: $om-border-radius;
+  outline: 0;
+}
+
+.#{$prefix}--snippet--single
+  .#{$prefix}--copy-btn:focus
+  .#{$prefix}--snippet__icon,
+.#{$prefix}--snippet--multi
+  .#{$prefix}--copy-btn:focus
+  .#{$prefix}--snippet__icon {
+  fill: $rhm-color__black;
+}
+
+.#{$prefix}--snippet--single
+  .#{$prefix}--copy-btn:active
+  .#{$prefix}--snippet__icon,
+.#{$prefix}--snippet--multi
+  .#{$prefix}--copy-btn:active
+  .#{$prefix}--snippet__icon {
+  fill: $rhm-color__primary--BLUE;
+}
+
+.#{$prefix}--snippet--single .#{$prefix}--copy-btn .#{$prefix}--snippet__icon,
+.#{$prefix}--snippet--multi .#{$prefix}--copy-btn .#{$prefix}--snippet__icon {
+  fill: $rhm-color__primary--BLUE;
+}
+
+.#{$prefix}--snippet--single .#{$prefix}--snippet-container:focus {
+  outline: none;
+}
+
+.#{$prefix}--snippet--multi .#{$prefix}--snippet-container {
+  overflow: auto;
+  position: initial;
+}
+
+// Light version
+.#{$prefix}--snippet--single,
+.#{$prefix}--snippet--single .#{$prefix}--snippet-button,
+.#{$prefix}--snippet--single .#{$prefix}--snippet-btn--expand {
+  background-color: $ui-02;
+}
+
+.#{$prefix}--snippet--single::after {
+  // Safari interprets `transparent` differently, so make color token value transparent instead:
+  background-image: linear-gradient(to right, rgba($ui-02, 0), $ui-02);
+}
+
+.#{$prefix}--snippet--multi .#{$prefix}--snippet-container pre {
+  padding-right: 0px;
+  margin-right: 2.75rem;
+  &:after {
+    background-image: none;
+  }
+}
+
+.#{$prefix}--snippet--multi .#{$prefix}--snippet-container.#{$om-prefix}-code-snippet__multi--LARGE-CONTAINER,
+.#{$prefix}--snippet--multi .#{$prefix}--snippet-container.#{$om-prefix}-code-snippet__multi--CONTAINER {
+  position: relative;
+  &:after {
+    width: 4rem;
+    content: '';
+    position: absolute;
+    top: $spacing-05;
+    right: $spacing-08;
+    background-image: linear-gradient(to right, rgba($ui-02, 0), $ui-02 75%);
+    height: 100%;
+  }
+}
+
+// Skeleton State
+.#{$prefix}--snippet--single.#{$prefix}--skeleton {
+  height: rem(40px);
+}
+
+.#{$prefix}--snippet--single.#{$prefix}--skeleton code,
+.#{$prefix}--snippet--multi.#{$prefix}--skeleton code {
+  @include skeleton;
+  height: rem(8px);
+}
+
+.#{$prefix}--snippet--single.#{$prefix}--skeleton span,
+.#{$prefix}--snippet--multi.#{$prefix}--skeleton span {
+  @include skeleton;
+  height: rem(8px);
+}
+
+.#{$prefix}--snippet-button-container {
+  position: absolute;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  border: none;
+  height: 2.5rem;
+  width: 2.5rem;
+  top: -1px;
+}
+
+.#{$prefix}--snippet--single.#{$prefix}--skeleton span,
+.#{$prefix}--snippet--multi.#{$prefix}--skeleton span {
+  background: $rhm-color__disabled !important;
+}
+
+.#{$prefix}--snippet-button-skeleton {
+  width: 16px;
+  height: 16px;
+  top: 0;
+  left: 0;
+  background-color: $rhm-color__disabled;
+  border-radius: $om-border-radius;
+}
+
+.#{$prefix}--snippet--single pre,
+.#{$prefix}--snippet--multi pre {
+  font-family: om--font-family('mono');
+}
+
+.#{$om-prefix}-code-snippet__multi--CONTAINER {
+  max-height: rem(195px) !important;
+}
+
+.#{$om-prefix}-code-snippet__multi--LARGE-CONTAINER {
+  max-height: rem(320px) !important;
+}
+
+pre.#{$om-prefix}-code-snippet__multi--NUMBERS {
+  counter-reset: line;
+  padding-bottom: 0rem !important;
+
+  div {
+    display: flex;
+  }
+
+  div span.om-code-snippet__NUMBER-SPAN {
+    display: block;
+    position: sticky;
+    left: 0;
+    background-color: $rhm-color__white;
+
+    &:before {
+      counter-increment: line;
+      content: counter(line);
+      display: inline-block;
+      width: $spacing-05; /* Fixed width */
+      border-right: 1px solid $rhm-color__border;
+      padding-right: $spacing-05;
+      margin-right: $spacing-05;
+      color: $rhm-color__typography;
+      -webkit-user-select: none;
+    }
+  }
+}
+
+pre.#{$om-prefix}-code-snippet__multi--WITHOUT-NUMBERS {
+  padding-bottom: 0rem !important;
+  span {
+    display: block;
+  }
+}
+
+.#{$om-prefix}-code-snippet__multi--BTN-CONTAINER {
+  padding-top: rem(20px);
+  justify-content: flex-end;
+  display: flex;
+  padding-top: $spacing-05;
+}

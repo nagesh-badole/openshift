@@ -1,0 +1,213 @@
+// Carbon Side Navigation component
+
+.#{$prefix}--header ~ .#{$prefix}--side-nav {
+  top: $om-navigation-height;
+}
+
+a.#{$prefix}--side-nav__link {
+  border: 2px solid transparent;
+  border-radius: $om-border-radius;
+  color: $om-color__text-secondary;
+  cursor: pointer;
+  padding: 0 $spacing-05 0 $spacing-07;
+}
+
+.#{$prefix}--side-nav__item .#{$prefix}--side-nav__submenu-title,
+a.#{$prefix}--side-nav__link > .#{$prefix}--side-nav__link-text,
+.#{$prefix}--side-nav
+  a.#{$prefix}--header__menu-item
+  .#{$prefix}--text-truncate-end {
+  @include typography-subheadline3;
+
+  color: $om-color__text-secondary;
+}
+
+a.#{$prefix}--side-nav__link:focus,
+.#{$prefix}--side-nav a.#{$prefix}--header__menu-item:focus,
+.#{$prefix}--side-nav a.#{$prefix}--header__menu-item[role='menuitem']:focus,
+.#{$prefix}--side-nav__submenu:focus {
+  outline: none;
+  border-color: $om-color-primary-blue;
+}
+
+.#{$prefix}--side-nav__submenu:hover,
+.#{$prefix}--side-nav__item:not(.#{$prefix}--side-nav__item--active):hover
+  .#{$prefix}--side-nav__item:not(.#{$prefix}--side-nav__item--active)
+  > .#{$prefix}--side-nav__submenu:hover,
+.#{$prefix}--side-nav__item:not(.#{$prefix}--side-nav__item--active)
+  > .#{$prefix}--side-nav__link:hover,
+.#{$prefix}--side-nav__menu
+  a.#{$prefix}--side-nav__link:not(.#{$prefix}--side-nav__link--current):not([aria-current='page']):hover,
+.#{$prefix}--side-nav__menu
+  a.#{$prefix}--side-nav__link[role='menuitem']:not(.#{$prefix}--side-nav__link--current):not([aria-current='page']):hover,
+.#{$prefix}--side-nav a.#{$prefix}--header__menu-item:hover,
+.#{$prefix}--side-nav a.#{$prefix}--header__menu-item[role='menuitem']:hover,
+.#{$prefix}--side-nav
+  .#{$prefix}--header__menu-title[aria-expanded='true']:hover,
+.#{$prefix}--side-nav
+  .#{$prefix}--header__menu-title[role='menuitem'][aria-expanded='true']:hover,
+.#{$prefix}--side-nav__menu a.#{$prefix}--side-nav__link--current:hover,
+.#{$prefix}--side-nav__item--active
+  .#{$prefix}--side-nav__submenu[aria-expanded='true']:hover,
+.#{$prefix}--side-nav__item--active
+  .#{$prefix}--side-nav__submenu[aria-expanded='false']:hover {
+  background-color: $om-color-gray-lightest;
+}
+
+.#{$prefix}--side-nav__item:not(.#{$prefix}--side-nav__item--active)
+  > .#{$prefix}--side-nav__link:hover
+  > span,
+.#{$prefix}--side-nav__item:not(.#{$prefix}--side-nav__item--active)
+  > .#{$prefix}--side-nav__link:hover
+  > span,
+.#{$prefix}--side-nav__item:not(.#{$prefix}--side-nav__item--active)
+  .#{$prefix}--side-nav__menu-item
+  > .#{$prefix}--side-nav__link:hover
+  > span {
+  color: $om-color__text-secondary;
+}
+
+a.#{$prefix}--side-nav__link[aria-current='page']
+  .#{$prefix}--side-nav__link-text,
+a.#{$prefix}--side-nav__link--current .#{$prefix}--side-nav__link-text,
+.#{$prefix}--side-nav__item
+  > a.#{$prefix}--side-nav__link--current:hover
+  .#{$prefix}--side-nav__link-text {
+  color: $om-color__text-default;
+}
+
+.#{$prefix}--side-nav__menu a.#{$prefix}--side-nav__link--current,
+.#{$prefix}--side-nav__menu a.#{$prefix}--side-nav__link[aria-current='page'] {
+  background-color: $om-color-gray-lighterest;
+}
+
+.#{$prefix}--side-nav__menu a.#{$prefix}--side-nav__link--current::before {
+  content: none;
+}
+
+.#{$prefix}--side-nav__item--active
+  .#{$prefix}--side-nav__submenu[aria-expanded='false'],
+a.#{$prefix}--side-nav__link--current {
+  background-color: $om-color-gray-lighterest;
+}
+
+.#{$prefix}--side-nav__item--active
+  .#{$prefix}--side-nav__submenu[aria-expanded='true'] {
+  background-color: $om-color-white;
+}
+
+.#{$prefix}--side-nav__item--active .#{$prefix}--side-nav__submenu-title {
+  color: $om-color__text-default;
+}
+
+.#{$prefix}--side-nav__menu a.#{$prefix}--side-nav__link--current,
+.#{$prefix}--side-nav__menu a.#{$prefix}--side-nav__link[aria-current='page'],
+a.#{$prefix}--side-nav__link--current {
+  & > span {
+    @include om--font-weight('medium');
+  }
+}
+
+.#{$prefix}--side-nav__item--active
+  .#{$prefix}--side-nav__submenu[aria-expanded='false']::before,
+.#{$prefix}--side-nav__item--active
+  .#{$prefix}--side-nav__submenu[aria-expanded='true']::before,
+a.#{$prefix}--side-nav__link[aria-current='page']::before,
+a.#{$prefix}--side-nav__link--current::before {
+  background-color: $om-color-primary;
+  bottom: 0;
+  content: '';
+  left: -2px;
+  position: absolute;
+  top: 0;
+  width: 4px;
+}
+
+.#{$prefix}--side-nav__submenu[aria-haspopup='true'] {
+  border: 2px solid transparent;
+  border-radius: $om-border-radius;
+  color: $om-color__text-secondary;
+  cursor: pointer;
+  padding: 0 $spacing-05 0 $spacing-07;
+  position: relative;
+}
+
+.#{$prefix}--side-nav__submenu[aria-haspopup='true']:focus {
+  outline: none;
+  border-color: $om-color-primary-blue;
+}
+
+.#{$prefix}--side-nav__icon > svg {
+  fill: $om-color-gray-darkest;
+  height: rem(24px);
+  width: rem(24px);
+}
+
+.#{$prefix}--side-nav__menu a.#{$prefix}--side-nav__link[role='menuitem'] {
+  height: 3rem;
+  padding-left: $spacing-09;
+}
+
+.#{$om-prefix}-header__side-nav {
+  height: calc(100% - #{$om-navigation-height});
+  left: initial;
+  padding-top: $spacing-05;
+  right: 0;
+
+  .#{$prefix}--side-nav__items {
+    display: flex;
+    flex-direction: column;
+    padding-top: 0;
+  }
+
+  .#{$prefix}--side-nav__item.#{$om-prefix}-header__side-nav__auth {
+    display: block;
+    margin-bottom: $spacing-05;
+    overflow: visible;
+    padding: 0 $spacing-05;
+
+    @include carbon--breakpoint-up('lg') {
+      display: none;
+    }
+  }
+
+  .#{$om-prefix}-header__side-nav__legal {
+    margin-top: auto;
+    a.#{$prefix}--side-nav__link {
+      color: $om-color__text-tertiary;
+    }
+  }
+  .#{$om-prefix}-side-nav__logout {
+    @include typography-subheadline3;
+
+    border: 2px solid transparent;
+    border-radius: 3px;
+    display: block;
+    color: $om-color-primary-blue;
+    text-decoration: none;
+    margin-bottom: $spacing-05;
+    margin-top: auto;
+    padding: $spacing-04 $spacing-07;
+
+    @include carbon--breakpoint-up('lg') {
+      display: none;
+    }
+
+    &:hover,
+    &:active {
+      color: $om-color-hover-2;
+    }
+
+    &:focus {
+      color: $om-color-primary-blue;
+      border: 2px solid $om-color-focus-2;
+      outline: none;
+    }
+  }
+}
+
+// RH Marketplace specific
+
+.#{$om-prefix}-side-navigation {
+  box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.3);
+}

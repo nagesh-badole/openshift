@@ -1,0 +1,58 @@
+// ITCSS structure
+// Original post by Harry Roberts https://www.creativebloq.com/web-design/manage-large-css-projects-itcss-101517528
+
+// 01. Settings - Used with pre-processors and contains fonts, colors definitions, etc.
+@import 'settings/font-face/red-hat';
+@import 'settings/colors';
+@import 'settings/global';
+@import 'settings/theme';
+@import 'settings/z-index';
+
+// 02. Tools - Globally used mixins and functions.
+@import 'tools/button';
+@import 'tools/notification';
+@import 'tools/typography';
+@import 'tools/spacing';
+
+// 04. Generic - Reset and/or normalized styles, box-sizing definition, etc.
+
+// 05. Elements - Styling for bare HTML elements (h1, a, p).
+@import 'elements/global';
+@import 'elements/checkbox';
+@import 'elements/combobox';
+@import 'elements/select';
+@import 'elements/text-area';
+@import 'elements/text-input';
+@import 'elements/radio-button';
+
+// 06. Components - Specific UI component styling.
+@import 'components/breadcrumbs';
+@import 'components/button';
+@import 'components/cta';
+@import 'components/data-table';
+@import 'components/dropdown';
+@import 'components/empty';
+@import 'components/exception';
+@import 'components/file-uploader';
+@import 'components/global-footer';
+@import 'components/inline-loading';
+@import 'components/leadspace';
+@import 'components/link';
+@import 'components/modal';
+@import 'components/notification';
+@import 'components/number-input';
+@import 'components/overflow-menu';
+@import 'components/page-shell';
+@import 'components/status-indicator';
+@import 'components/search';
+@import 'components/tabs';
+@import 'components/tile';
+@import 'components/typography';
+@import 'components/ui-shell';
+@import 'components/video-player';
+@import 'components/code-snippet';
+@import 'components/line';
+@import 'components/tag';
+
+// 07. Utilities - Utilities and helper classes with ability to override anything above.
+@import 'utilities/spacing';

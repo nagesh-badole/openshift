@@ -1,0 +1,50 @@
+.#{$prefix}--text-area {
+  border-radius: $om-border-radius;
+  background-color: $om-color-white;
+  border: 1px solid $om-color-gray-lighter;
+
+  &:hover {
+    border-bottom: solid 1px $rh-color-blue;
+    border-radius: $om-border-radius $om-border-radius 0 0;
+  }
+
+  &:focus {
+    border-radius: $om-border-radius;
+    border: 1px solid $om-color-primary-blue;
+    outline: 0;
+  }
+
+  &:disabled {
+    color: $om-color__text-secondary;
+    background-color: $om-color-gray-lightest;
+    border-color: $om-color-gray-lightest;
+  }
+
+  .#{$prefix}--skeleton,
+  .#{$prefix}--skeleton:hover,
+  .#{$prefix}--skeleton:focus {
+    border: none;
+  }
+}
+
+.#{$prefix}--text-area__wrapper[data-invalid]
+  > .#{$prefix}--text-area--invalid {
+  outline: 0;
+  border: 1px solid $om-color-danger;
+  border-radius: $om-border-radius;
+}
+
+.#{$prefix}--skeleton {
+  background-color: $om-color-gray-lightest;
+}
+
+.#{$prefix}--label.#{$prefix}--skeleton {
+  height: rem(8px);
+  width: rem(40px);
+  border-radius: $om-border-radius;
+  background-color: $om-color-gray-lightest;
+}
+
+.#{$prefix}--label.#{$prefix}--skeleton:before {
+  border-radius: $om-border-radius;
+}

@@ -1,0 +1,60 @@
+.#{$om-prefix}-tile {
+  @include font-size--b2;
+
+  background-color: $rhm-color__white;
+  border-radius: $om-border-radius;
+  border: 1px solid $rhm_color__border;
+  padding: $spacing-05;
+}
+
+.#{$om-prefix}-tile.#{$prefix}--tile--clickable,
+.#{$om-prefix}-tile.#{$prefix}--tile--expandable,
+.#{$om-prefix}-tile.#{$prefix}--tile--selectable {
+  @include carbon--motion(standard, productive);
+
+  transition-property: box-shadow;
+
+  &:hover {
+    background-color: $rhm-color__white;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+  }
+
+  &:focus {
+    outline: none;
+    border: 2px solid $rhm-color__primary--BLUE;
+    padding: calc(#{$spacing-05} - 1px);
+  }
+}
+
+.#{$om-prefix}-tile.#{$prefix}--tile--selectable {
+  & > .#{$prefix}--tile__checkmark {
+    transition-property: opacity;
+  }
+
+  &:hover > .#{$prefix}--tile__checkmark,
+  &:focus > .#{$prefix}--tile__checkmark {
+    opacity: 1;
+  }
+
+  &:focus > .#{$prefix}--tile__checkmark {
+    top: calc(1rem - 1px);
+    right: calc(1rem - 1px);
+  }
+
+  & > .#{$prefix}--tile__checkmark svg {
+    fill: $rhm-color__black--600;
+  }
+}
+
+.#{$prefix}--tile-input:checked + .#{$prefix}--tile--selectable {
+  border-color: $rhm-color__black;
+  outline: none;
+
+  &:focus {
+    border-color: $rhm-color__primary--BLUE;
+  }
+
+  & > .#{$prefix}--tile__checkmark svg {
+    fill: $rhm-color__primary--BLUE;
+  }
+}

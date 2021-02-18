@@ -1,0 +1,165 @@
+$om-border-radius-12: 12px;
+$om-border-radius-18: 18px;
+$rhm-color__blue--200--opacity--30: rgba(115, 188, 247, 0.3);
+$rhm-color__red--100--opacity--20: rgba(201, 25, 11, 0.2);
+$rhm-color__light-green--400--30: rgba(146, 212, 0, 0.3);
+$rhm-border__transparent: 1px solid rgba(255, 255, 255, 0.0);
+
+.#{$prefix}--tag {
+  @include om--font-family('text');
+  max-height: $spacing-06;
+  box-sizing: border-box;
+  border: 1px solid $rhm-color__black--300;
+  border-radius: $om-border-radius-18;
+  background-color: $rhm-color__white;
+  color: $rhm-color__black--900;
+  font-size: 0.75rem;
+  letter-spacing: 0;
+  line-height: 1rem;
+  &:focus {
+    box-sizing: border-box;
+    border: $spacing-01 solid #0066cc;
+    border-radius: $om-border-radius-12;
+    outline: none;
+  }
+  &:hover {
+    border: 1px solid $rhm-color__black--300;
+    background-color: $rhm-color__black--200;
+  }
+  &--red {
+    color: $rhm-color__red--200;
+    background-color: $rhm-color__red--100--opacity--20;
+    border-radius: $om-border-radius-12;
+    border: $rhm-border__transparent;
+    &:hover {
+      color: $rhm-color__red--200;
+      background-color: $rhm-color__red--100--opacity--20;
+      border: 1px solid $rhm-color__red--100--opacity--20;
+    }
+  }
+  &--blue {
+    background-color: $rhm-color__blue--200--opacity--30;
+    color: $rhm-color__blue--400;
+    border: $rhm-border__transparent;
+    border-radius: $om-border-radius-12;
+    &:hover {
+      color: $rhm-color__blue--400;
+      background-color: $rhm-color__blue--200--opacity--30;
+      border: 1px solid $rhm-color__blue--200--opacity--30;
+    }
+  }
+  &--green {
+    background-color: $rhm-color__light-green--400--30;
+    color: $rhm-color__cyan--500;
+    border-radius: $om-border-radius-12;
+    border: $rhm-border__transparent;
+    &:hover {
+      color: $rhm-color__cyan--500;
+      background-color: $rhm-color__light-green--400--30;
+      border: 1px solid $rhm-color__light-green--400--30;
+    }
+  }
+  &--disabled {
+    color: $rhm-color__black--600;
+    background-color: $rhm-color__black--200;
+    border: none;
+    opacity: 0.7;
+    &:hover {
+      color: $rhm-color__black--600;
+      border: none;
+      background-color: $rhm-color__black--200;
+    }
+  }
+}
+
+// tag.js styles
+.#{$om-prefix}-tag-skeleton {
+  height: $spacing-06;
+  border-radius: $om-border-radius-18;
+  &-filter {
+    &:hover {
+      border: none;
+    }
+  }
+  &:hover {
+    border: none;
+  }
+}
+
+.#{$om-prefix}-filter-text-icon {
+  flex-shrink: 0;
+  height: 1.25rem;
+  margin: 0 0 0 $spacing-02;
+  padding: $spacing-01;
+  padding-left: 0px;
+  padding-right: 0px;
+  border: 0;
+  background-color: transparent;
+  color: $rhm-color__black--400;
+  border-radius: 50%;
+  cursor: pointer;
+  fill: $rhm-color__black--400;
+}
+
+.#{$om-prefix}-text-line {
+  height: $spacing-03;
+  width: 3.125rem;
+  border-radius: $om-border-radius;
+  background-color: $rhm-color__black--300;
+  padding-left: $spacing-05;
+  padding-right: $spacing-05;
+}
+
+.#{$om-prefix}-text-line-filter {
+  height: $spacing-03;
+  width: 3.5rem;
+  border-radius: $om-border-radius;
+  background-color: $rhm-color__black--300;
+  margin-left: $spacing-03;
+  margin-right: $spacing-03;
+}
+
+.#{$prefix}--tag.#{$prefix}--skeleton {
+  width: 5.125rem;
+  border-radius: $om-border-radius-18;
+}
+
+.#{$prefix}--tag.#{$prefix}--skeleton.om-tag-skeleton-filter {
+  width: 6.25rem;
+  border-radius: $om-border-radius-18;
+}
+
+// close icon styles for different styles
+.#{$prefix}--tag--blue .#{$prefix}--tag__close-icon:hover {
+  background-color: $rhm-color__blue--200--opacity--30;
+}
+
+.#{$prefix}--tag--blue .#{$prefix}--tag__close-icon svg {
+  fill: $rhm-color__blue--400;
+}
+
+.#{$prefix}--tag--red .#{$prefix}--tag__close-icon:hover {
+  background-color: $rhm-color__red--100--opacity--20;
+}
+
+.#{$prefix}--tag--red .#{$prefix}--tag__close-icon svg {
+  fill: $rhm-color__red--200;
+}
+
+.#{$prefix}--tag--green .#{$prefix}--tag__close-icon:hover {
+  background-color: $rhm-color__light-green--400--30;
+}
+
+.#{$prefix}--tag--green .#{$prefix}--tag__close-icon svg {
+  fill: $rhm-color__cyan--500;
+}
+
+.#{$prefix}__close-icon:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+// bx-label styles
+.#{$prefix}__label:focus {
+  outline: none;
+}

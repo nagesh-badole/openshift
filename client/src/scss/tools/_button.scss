@@ -1,0 +1,310 @@
+/// Base Red Hat Marketplace styling used across all buttons.
+/// @access private
+/// @group @symposium/ui-styles
+@mixin base-button {
+  @include font-size--b1;
+
+  border-width: 1px;
+  border-radius: $om-border-radius;
+  justify-content: center;
+  min-width: rem(176px);
+  padding-left: $spacing-05;
+  padding-right: $spacing-05;
+  z-index: 1;
+
+  &:not(.#{$prefix}--btn--disabled):focus,
+  &:not(.#{$prefix}--btn--disabled):hover {
+    .#{$prefix}--btn__icon {
+      right: 0.5rem;
+    }
+  }
+
+  & > .#{$prefix}--btn__content {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  & .#{$prefix}--btn__icon {
+    bottom: 0;
+    margin: auto;
+    right: 1rem;
+    top: 0;
+    transition: right 200ms ease;
+    z-index: 1;
+  }
+
+  &.#{$prefix}--btn--disabled {
+    background-color: $rhm-color__black--200;
+    border-color: $rhm-color__black--200;
+    color: $rhm-color__black--600;
+    cursor: not-allowed;
+
+    &:active {
+      pointer-events: none;
+    }
+
+    &:hover,
+    &:focus,
+    &:active {
+      background-color: $rhm-color__black--200;
+      border-color: $rhm-color__black--200;
+      color: $rhm-color__black--600;
+      outline-color: transparent;
+
+      &:before {
+        content: none;
+      }
+    }
+  }
+}
+
+/// Creates a gradient background.
+/// @parameter {Hex} $bg-color [$rh-color-red] - The fall back background color.
+/// @parameter {Hex} $start-color [$rh-color-red] - The starting color used in the background-image linear-gradient.
+/// @parameter {Hex} $end-color [$rh-color-red-dark] - The ending color used in the background-image linear-gradient
+/// @access private
+/// @group @symposium/ui-styles
+@mixin button-gradient-background(
+  $bg-color: $rhm-color__red--BRAND,
+  $start-color: $rhm-color__red--BRAND,
+  $end-color: $rhm-color__red--300
+) {
+  background-color: $bg-color;
+  background-image: linear-gradient(
+    134.57deg,
+    $start-color 50%,
+    $end-color 100%
+  );
+  background-origin: border-box;
+  background-position: right -1px center;
+  background-size: 200%;
+
+  &:active,
+  &:hover,
+  &:focus {
+    background-position: left;
+  }
+}
+
+@mixin button-focus {
+  &:before {
+    border-radius: $om-border-radius;
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border: 2px solid $rhm-color__blue--300;
+    margin: -5px;
+    padding: 3px;
+    top: 0;
+    left: 0;
+  }
+}
+
+/// Creates the styles for a primary button
+/// @access private
+/// @group @symposium/ui-styles
+@mixin button-primary-alternative {
+  background-color: $rhm-color__primary--BLUE;
+  border-color: $rhm-color__primary--BLUE;
+  border-width: 1px;
+  color: $rhm-color__white;
+
+  &:focus {
+    background-color: $rhm-color__blue--BRAND-HOVER;
+    border-color: $rhm-color__blue--BRAND-HOVER;
+    box-shadow: none;
+
+    @include button-focus;
+  }
+
+  &:hover,
+  &:active {
+    background-color: $rhm-color__blue--BRAND-HOVER;
+    border-color: $rhm-color__blue--BRAND-HOVER;
+  }
+}
+
+/// Creates the styles for a secondary button
+/// @access private
+/// @group @symposium/ui-styles
+@mixin button-secondary-alternative {
+  background-color: $rhm-color__white;
+  border-color: $rhm-color__primary--BLUE;
+  border-width: 1px;
+  color: $rhm-color__primary--BLUE;
+
+  &:focus {
+    background-color: $rhm-color__white;
+    border-color: $rhm-color__primary--BLUE;
+    box-shadow: inset 0 0 0 1px $rhm-color__primary--BLUE;
+    color: $rhm-color__primary--BLUE;
+    outline: none;
+
+    @include button-focus;
+  }
+
+  &:active,
+  &:hover {
+    background-color: $rhm-color__white;
+    border-color: $rhm-color__primary--BLUE;
+    box-shadow: inset 0 0 0 1px $rhm-color__primary--BLUE;
+    color: $rhm-color__primary--BLUE;
+  }
+}
+/// Creates the styles for a tertiary button
+/// @access private
+/// @group @symposium/ui-styles
+@mixin button-tertiary {
+  background-color: $rhm-color__white;
+  border-color: $rhm-color__black--900;
+  border-width: 1px;
+  color: $rhm-color__black--900;
+
+  &:focus {
+    background-color: $rhm-color__white;
+    border-color: $rhm-color__black--900;
+    box-shadow: inset 0 0 0 1px $rhm-color__black--900;
+    color: $rhm-color__black--900;
+
+    @include button-focus;
+  }
+
+  &:active,
+  &:hover {
+    background-color: $rhm-color__white;
+    border-color: $rhm-color__black--900;
+    box-shadow: inset 0 0 0 1px $rhm-color__black--900;
+    color: $rhm-color__black--900;
+  }
+
+  &.#{$prefix}--btn--disabled {
+    background-color: $rhm-color__black--200;
+    border-color: $rhm-color__black--200;
+    color: $rhm-color__black--600;
+    cursor: not-allowed;
+
+    &:active {
+      pointer-events: none;
+    }
+
+    &:hover,
+    &:focus,
+    &:active {
+      background-color: $rhm-color__black--200;
+      border-color: $rhm-color__black--200;
+      color: $rhm-color__black--600;
+      outline-color: transparent;
+
+      &:before {
+        content: none;
+      }
+    }
+  }
+}
+
+/// Creates the styles for a danger button
+/// @access private
+/// @group @symposium/ui-styles
+@mixin button-danger {
+  background-color: $rhm-color__status--DANGER;
+  border-color: $rhm-color__status--DANGER;
+  border-width: 1px;
+
+  &:hover,
+  &:active {
+    background-color: $rhm-color__alert-text--DANGER;
+    border-color: $rhm-color__alert-text--DANGER;
+    border-width: 1px;
+  }
+
+  &:focus {
+    background-color: $rhm-color__alert-text--DANGER;
+    border-color: $rhm-color__alert-text--DANGER;
+    box-shadow: none;
+
+    @include button-focus;
+  }
+}
+
+/// Creates the styles for a ghost button
+/// @access private
+/// @group @symposium/ui-styles
+@mixin button-ghost {
+  color: $rhm-color__link;
+  border-color: transparent;
+
+  &:focus {
+    background-color: $rhm-color__blue--50;
+    border-color: transparent;
+    box-shadow: none;
+    outline: none;
+
+    @include button-focus;
+  }
+
+  &:active {
+    color: $rhm-color__link;
+    background-color: $rhm-color__blue--50;
+  }
+
+  &:hover {
+    color: $rhm-color__link;
+    background-color: $rhm-color__blue--50;
+  }
+
+  &.#{$prefix}--btn--disabled {
+    background-color: transparent;
+    border-color: transparent;
+    color: $rhm-color__black--600;
+    cursor: not-allowed;
+
+    &:active {
+      pointer-events: none;
+    }
+
+    &:hover,
+    &:focus,
+    &:active {
+      background-color: transparent;
+      border-color: transparent;
+      color: $rhm-color__black--600;
+      outline-color: transparent;
+
+      &:before {
+        content: none;
+      }
+    }
+  }
+}
+
+/// Creates the styles for a CTA
+/// @access private
+/// @group @symposium/ui-styles
+@mixin cta-primary {
+  background-color: $rhm-color__primary;
+  border-color: $rhm-color__primary;
+  border-width: 1px;
+  color: $rhm-color__white;
+
+  &:focus {
+    background-color: $rhm-color__red--BRAND-HOVER;
+    border-color: transparent;
+  }
+
+  &:hover,
+  &:active {
+    background-color: $rhm-color__red--BRAND-HOVER;
+    border-color: $rhm-color__red--BRAND-HOVER;
+  }
+}
+
+/// Button Size Field
+/// @access private
+/// @group @symposium/ui-styles
+@mixin button-size--field {
+  height: rem(40px);
+  min-height: rem(40px);
+  padding: calc(#{rem(10px)} - 3px) 1rem;
+}

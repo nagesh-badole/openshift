@@ -1,0 +1,184 @@
+$data-table-toolbar-height: rem(40px);
+
+/**
+* Header
+**/
+
+.#{$prefix}--data-table-header {
+  padding: $spacing-05 0;
+}
+
+.#{$prefix}--data-table-header__title {
+  @include typography-h7;
+}
+
+.#{$prefix}--data-table-header__description {
+  @include typography-b2;
+
+  color: $om-color__text-secondary;
+}
+
+.#{$prefix}--data-table .#{$prefix}--table-header-label {
+  @include om--font-weight('medium');
+}
+
+/**
+* Table Elements
+**/
+
+.#{$prefix}--data-table td,
+.#{$prefix}--data-table tbody th {
+  color: $om-color__text-default;
+}
+
+.#{$prefix}--data-table-header,
+.#{$prefix}--table-toolbar,
+.#{$prefix}--data-table td {
+  background: $om-color-white;
+  border-top-color: $om-color-white;
+  border-bottom-color: $om-color-border;
+}
+
+.#{$prefix}--data-table tr:last-child td {
+  border-bottom: 0;
+}
+
+.#{$prefix}--data-table th,
+.#{$prefix}--data-table th.#{$prefix}--table-column-checkbox {
+  background: $om-color-gray-lightest;
+}
+
+.#{$prefix}--data-table tbody tr:hover,
+.#{$prefix}--data-table tbody tr:hover td,
+.#{$prefix}--data-table tbody tr:hover th,
+tr.#{$prefix}--data-table--selected td {
+  background: $om-color-gray-lightest;
+}
+
+.#{$prefix}--data-table tbody .#{$prefix}--data-table--selected:hover td {
+  background-color: $om-color-gray-lighter;
+}
+
+.#{$prefix}--data-table .#{$prefix}--table-sort,
+.#{$prefix}--data-table .#{$prefix}--table-sort:hover {
+  background-color: $om-color-gray-lightest;
+}
+
+/**
+* Overflow Menu
+**/
+
+.#{$prefix}--overflow-menu:hover,
+.#{$prefix}--overflow-menu__trigger:hover,
+.#{$prefix}--data-table .#{$prefix}--table-sort:hover,
+.#{$prefix}--data-table .#{$prefix}--overflow-menu:hover,
+.#{$prefix}--data-table .#{$prefix}--overflow-menu__trigger:hover {
+  background-color: $om-color-gray-lightest;
+}
+
+/**
+* Search
+**/
+
+.#{$prefix}--toolbar-search-container-expandable .#{$prefix}--search {
+  &:hover:before,
+  &:focus:before {
+    content: none;
+  }
+}
+
+.#{$prefix}--toolbar-search-container-expandable
+  .#{$prefix}--search
+  .#{$prefix}--search-magnifier {
+  fill: $om-color-black;
+  height: $data-table-toolbar-height;
+  width: $data-table-toolbar-height;
+  padding: rem(12px);
+}
+
+.#{$prefix}--toolbar-search-container-active
+  .#{$prefix}--search
+  .#{$prefix}--label,
+.#{$prefix}--toolbar-search-container-active
+  .#{$prefix}--search
+  .#{$prefix}--search-input {
+  padding: 0 $spacing-09;
+}
+
+/**
+* Toolbar
+**/
+
+$toolbar-spacing: $spacing-03;
+
+.#{$prefix}--toolbar-content,
+.#{$prefix}--table-toolbar {
+  height: auto;
+}
+
+.#{$prefix}--table-toolbar {
+  padding: $toolbar-spacing;
+}
+
+.#{$prefix}--batch-actions {
+  background: $om-color-primary-blue;
+}
+
+.#{$prefix}--toolbar-action,
+.#{$prefix}--toolbar-search-container-expandable
+  .#{$prefix}--search
+  .#{$prefix}--search-close,
+.#{$prefix}--overflow-menu.#{$prefix}--toolbar-action {
+  height: $data-table-toolbar-height;
+  width: $data-table-toolbar-height;
+  padding: 0;
+}
+
+.#{$prefix}--toolbar-action {
+  margin-left: $spacing-02;
+}
+
+.#{$prefix}--toolbar-action,
+.#{$prefix}--search .#{$prefix}--search-magnifier {
+  border-radius: $om-border-radius;
+}
+
+.#{$prefix}--toolbar-action:hover:not([disabled]),
+.#{$prefix}--toolbar-search-container-expandable
+  .#{$prefix}--search
+  .#{$prefix}--search-magnifier:hover {
+  background-color: $om-color-gray-lightest;
+}
+
+.#{$prefix}--toolbar-action ~ .#{$prefix}--btn {
+  @include button-size--field;
+
+  margin-left: $toolbar-spacing;
+}
+
+.#{$prefix}--batch-actions {
+  border-radius: $om-border-radius;
+  height: rem(40px);
+  top: $toolbar-spacing;
+}
+
+.#{$prefix}--action-list .#{$prefix}--btn {
+  @include typography-b2;
+  @include button-size--field;
+
+  color: $om-color-white;
+
+  &:focus {
+    outline-color: $rh-color-blue-light;
+    outline-offset: -1px;
+    outline-width: 1px;
+  }
+}
+
+.#{$prefix}--action-list .#{$prefix}--btn .#{$prefix}--btn__icon {
+  position: initial;
+}
+
+.#{$prefix}--btn--primary.#{$prefix}--batch-summary__cancel::before {
+  top: $spacing-04;
+}

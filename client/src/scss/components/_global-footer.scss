@@ -1,0 +1,174 @@
+.#{$om-prefix}-footer {
+  background-color: $om-color-gray-darkest;
+  color: $om-color-gray-light;
+  padding: $spacing-07 0 $spacing-09;
+  position: relative;
+  z-index: $om-z-index__footer;
+
+  @include carbon--breakpoint-up('md') {
+    padding: $spacing-07 0 rem(85px);
+  }
+
+  @include carbon--breakpoint-up('lg') {
+    padding: $spacing-06 0;
+  }
+
+  &__main {
+    padding: 0 $spacing-05;
+
+    @include carbon--breakpoint-up('md') {
+      padding: 0;
+    }
+
+    @include carbon--breakpoint-up('lg') {
+      align-items: center;
+      flex-direction: row;
+      padding: 0 $spacing-05;
+    }
+  }
+}
+
+.#{$om-prefix}-footer__logo__rhm {
+  margin: $spacing-07 0;
+
+  @include carbon--breakpoint-up('md') {
+    background-color: $om-color-black;
+    bottom: 0;
+    margin: 0;
+    left: 0;
+    padding: $spacing-06 $spacing-07;
+    position: absolute;
+  }
+
+  @include carbon--breakpoint-up('lg') {
+    $rhm-image-width: rem(235px);
+
+    background-color: transparent;
+    bottom: auto;
+    flex: 0 0 $rhm-image-width;
+    left: auto;
+    padding: 0;
+    position: relative;
+    order: 1;
+    width: $rhm-image-width;
+    max-width: $rhm-image-width;
+  }
+
+  a {
+    display: block;
+  }
+
+  img {
+    height: rem(35px);
+  }
+}
+
+.#{$om-prefix}-footer__logo__ibm {
+  background-color: $om-color-black;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  left: 0;
+  padding: $spacing-05;
+  position: absolute;
+  right: 0;
+
+  @include carbon--breakpoint-up('md') {
+    justify-content: flex-end;
+    left: auto;
+    padding: $spacing-07;
+  }
+
+  @include carbon--breakpoint-up('lg') {
+    background-color: transparent;
+    bottom: auto;
+    flex: 1;
+    left: auto;
+    max-width: initial;
+    order: 3;
+    padding: 0;
+    position: relative;
+    right: auto;
+  }
+
+  a {
+    margin-left: $spacing-03;
+  }
+
+  svg {
+    height: rem(15px);
+  }
+}
+
+.#{$om-prefix}-footer__logo-link {
+  align-items: center;
+  display: flex;
+
+  @include carbon--breakpoint('md') {
+    justify-content: flex-end;
+  }
+}
+
+.#{$om-prefix}-footer__nav {
+  padding: 0 $spacing-05;
+
+  @include carbon--breakpoint-up('md') {
+    padding-bottom: $spacing-07;
+  }
+
+  @include carbon--breakpoint-up('lg') {
+    order: 2;
+    padding: 0 0 0 $spacing-07;
+  }
+}
+
+.#{$om-prefix}-footer__nav-item {
+  margin-right: $spacing-07;
+  margin-bottom: $spacing-06;
+
+  @include carbon--breakpoint('md') {
+    display: inline-block;
+    margin-bottom: 0;
+  }
+
+  &:last-child {
+    margin-right: 0;
+    margin-bottom: 0;
+  }
+}
+
+.#{$om-prefix}-footer a {
+  position: relative;
+
+  &,
+  &:visited {
+    color: $om-color-gray-lighter;
+    text-decoration: none;
+  }
+
+  &:focus,
+  &:active {
+    outline: none;
+  }
+
+  &:focus {
+    &:before {
+      border-radius: $om-border-radius;
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      border: 2px solid $om-color-secondary-blue;
+      top: 0;
+      left: 0;
+      margin: -5px;
+      padding: 3px;
+    }
+  }
+
+  &:active,
+  &:hover {
+    color: $om-color-white;
+    text-decoration: underline;
+  }
+}

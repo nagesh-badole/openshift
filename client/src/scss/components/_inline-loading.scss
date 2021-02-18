@@ -1,0 +1,11 @@
+.#{$prefix}--loading__stroke {
+  stroke: $om-color-primary-blue;
+}
+
+.#{$prefix}--inline-loading__checkmark-container {
+  fill: $om-color-success;
+}
+
+.#{$prefix}--inline-loading--error {
+  fill: $om-color-danger;
+}

@@ -1,0 +1,24 @@
+body {
+  font-family: 'Red Hat Text', 'Arial', sans-serif;
+}
+
+.#{$prefix}--header ~ .#{$prefix}--content,
+main {
+  margin-top: $om-navigation-height;
+}
+
+.#{$prefix}--header ~ .#{$prefix}--content {
+  padding: $spacing-05 0;
+
+  @include carbon--breakpoint-up('md') {
+    padding: $spacing-07 0;
+  }
+
+  @include carbon--breakpoint-up('lg') {
+    padding: $spacing-09 0;
+  }
+
+  @include carbon--breakpoint-up('xlg') {
+    padding: $spacing-09 $spacing-07;
+  }
+}

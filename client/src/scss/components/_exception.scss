@@ -1,0 +1,59 @@
+.om-exception {
+  background-repeat: no-repeat;
+  height: calc(100vh - #{$om-navigation-height});
+  padding-top: $layout-03;
+  background-size: 60%;
+
+  @include carbon--breakpoint('lg') {
+    padding-top: $layout-07;
+  }
+}
+
+.om-exception.om-exception--default-svg {
+  background-image: url('https://s3.us-east.cloud-object-storage.appdomain.cloud/rhm-assets/error-page-illustration.svg');
+  background-position: bottom $spacing-07 right $spacing-05;
+  @include carbon--breakpoint('lg') {
+    background-size: 40%;
+    background-position: top $spacing-07 right $spacing-05;
+  }
+}
+
+.om-exception.om-exception--unauthorized-svg {
+  background-image: url('https://rhm-assets.s3.us-east.cloud-object-storage.appdomain.cloud/unauthorized-access-illustration.svg');
+  background-position: bottom $spacing-05 center;
+  height: calc(100vh - 7rem);
+
+  @include carbon--breakpoint-between(0px, 321px) {
+    background-position: bottom 0 center;
+    .om-exception__error-title {
+      @include font-size--h10;
+    }
+  }
+  @include carbon--breakpoint('md') {
+    background-position: $spacing-09 left $spacing-09 center;
+  }
+  @include carbon--breakpoint('lg') {
+    background-size: 50%;
+    background-position: bottom $spacing-05 right $spacing-06;
+  }
+}
+
+.om-exception__error-code {
+  text-transform: uppercase;
+}
+
+.om-exception__error-code.om-type__sh3 {
+  @include carbon--breakpoint-down('md') {
+    @include typography-b1;
+  }
+}
+.om-exception__error-title.om-type__h4 {
+  @include carbon--breakpoint-down('md') {
+    @include typography-sh1;
+  }
+}
+.om-exception__error-subtitle.om-type__sh3 {
+  @include carbon--breakpoint-down('md') {
+    @include typography-b1;
+  }
+}

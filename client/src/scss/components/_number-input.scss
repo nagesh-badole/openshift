@@ -1,0 +1,43 @@
+.bx--number input[type='number']:focus {
+  border-color: $om-color-primary-blue;
+  outline: 0;
+}
+
+.bx--number input[type='number']:active {
+  border-color: $om-color-primary-blue;
+  outline: 0;
+}
+
+.bx--number input[type='number']:hover:not(:focus):not(:active):not(:disabled) {
+  border-bottom-color: $om-color-primary-blue;
+  border-radius: $om-border-radius $om-border-radius 0 0;
+}
+
+.bx--number[data-invalid] input[type='number'] {
+  border-color: $om-color-danger;
+  outline: none;
+
+  &:hover:not(:focus):not(:active) {
+    border-color: $om-color-danger;
+  }
+}
+
+input[type='number']::-webkit-outer-spin-button,
+input[type='number']::-webkit-inner-spin-button {
+  -webkit-appearance: none; //to hide spin boxes that appear
+}
+
+.#{$prefix}--number input[type='number'] {
+  background-color: $om-color-white;
+  border: 1px solid $om-color-gray-lighter;
+  border-radius: $om-border-radius;
+
+  &:placeholder-shown {
+    border: 1px solid $om-color-gray-lighter;
+  }
+
+  &:disabled {
+    background-color: $om-color-gray-lightest;
+    border: 1px solid $om-color-gray-lightest;
+  }
+}

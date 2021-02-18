@@ -1,0 +1,66 @@
+.#{$om-prefix}-header__side-nav,
+.#{$om-prefix}-header__profile-panel {
+  .#{$prefix}--dropdown,
+  .#{$om-prefix}-account-dropdown-skeleton {
+    border-radius: $om-border-radius;
+    border: none;
+    margin: 1rem;
+    height: rem(50px);
+    max-height: rem(50px);
+    width: calc(100% - 2rem);
+
+    .#{$prefix}--label {
+      color: $om-color-gray-darkest;
+    }
+
+    .#{$prefix}--list-box__field {
+      height: rem(50px);
+
+      &:before {
+        content: url(https://rhm-assets.s3.us-east.cloud-object-storage.appdomain.cloud/collaborate.svg);
+        padding-right: rem(3px);
+      }
+
+      .#{$prefix}--list-box__label {
+        @include typography-subheadline3;
+
+        color: $rh-color-blue;
+        padding-left: $spacing-01;
+      }
+    }
+  }
+
+  .#{$om-prefix}-account__title {
+    padding: $spacing-04 $spacing-07;
+  }
+  .#{$prefix}--inline-notification--error {
+    max-width: unset;
+    min-width: unset;
+    max-height: unset;
+    min-height: unset;
+    margin-bottom: 0;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    width: calc(100% - 2rem);
+  }
+  .bx--inline-notification__details {
+    height: rem(57px);
+  }
+}
+
+.#{$om-prefix}-header__side-nav {
+  .#{$prefix}--dropdown,
+  .#{$om-prefix}-account-dropdown-skeleton,
+  .#{$prefix}--inline-notification--error {
+    margin-top: 0 !important;
+    margin-bottom: 1rem;
+  }
+}
+
+.#{$om-prefix}-header__side-nav .#{$prefix}--dropdown {
+  display: block;
+
+  @include carbon--breakpoint-up('lg') {
+    display: none;
+  }
+}

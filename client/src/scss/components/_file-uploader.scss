@@ -1,0 +1,29 @@
+.#{$prefix}--file-browse-btn {
+  color: $om-color-primary-blue;
+
+  &:active {
+    color: $om-color-gray-darkerest;
+  }
+
+  &:hover,
+  &:focus {
+    outline: 2px solid $om-color-primary-blue;
+  }
+
+  &--disabled {
+    color: $om-color-gray-light;
+
+    &:hover,
+    &:focus {
+      color: $om-color-gray-light;
+    }
+  }
+
+  .#{$prefix}--file__drop-container--drag-over {
+    outline: 2px solid $om-color-primary-blue;
+  }
+}
+
+.#{$prefix}--file__state-container .#{$prefix}--file-complete {
+  fill: $om-color-success;
+}

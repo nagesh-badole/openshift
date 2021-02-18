@@ -1,0 +1,8 @@
+.recharts-responsive-container.line-chart .recharts-wrapper .recharts-cartesian-grid-vertical {
+  :first-child {
+      stroke-opacity: 0;
+  }
+  :last-child {
+      stroke-opacity: 0;
+  }
+}

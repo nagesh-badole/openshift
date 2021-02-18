@@ -1,0 +1,15 @@
+.#{$prefix}--radio-button__appearance {
+  border-color: $om-color-black;
+}
+
+.#{$prefix}--radio-button:checked
+  + .#{$prefix}--radio-button__label
+  .#{$prefix}--radio-button__appearance {
+  border-color: $om-color-primary-blue;
+}
+
+.#{$prefix}--radio-button:checked
+  + .#{$prefix}--radio-button__label
+  .#{$prefix}--radio-button__appearance:before {
+  background-color: $om-color-primary-blue;
+}

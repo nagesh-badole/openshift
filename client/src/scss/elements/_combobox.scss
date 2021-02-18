@@ -1,0 +1,83 @@
+.#{$prefix}--combo-box.#{$prefix}--list-box {
+  background: transparent;
+  border: 0;
+  &:hover {
+    background: transparent;
+  }
+  .#{$prefix}--list-box__field,
+  .#{$prefix}--list-box__field:hover:not(:focus):not(:active) {
+    outline: 0;
+    border: 0;
+  }
+  .#{$prefix}--list-box__invalid-icon {
+    fill: $om-color-danger;
+  }
+}
+.#{$prefix}--combo-box.#{$prefix}--list-box:not([data-invalid]) {
+  .#{$prefix}--list-box__field:hover:not(:focus):not(:active) {
+    background: transparent;
+    border: 0;
+  }
+}
+
+.#{$prefix}--list-box--light.#{$prefix}--combo-box input[role='combobox'] {
+  border-color: transparent;
+  outline: 0;
+
+  &:placeholder-shown {
+    border-color: transparent;
+  }
+}
+
+.#{$prefix}--list-box--light.#{$prefix}--combo-box
+  input[role='combobox']:focus {
+  border: 1px solid $om-color-primary-blue;
+  border-radius: $om-border-radius;
+}
+
+.#{$prefix}--list-box--light.#{$prefix}--combo-box
+  input[role='combobox']:hover {
+  border-bottom: 1px solid $om-color-primary-blue;
+}
+
+.#{$prefix}--list-box--light.#{$prefix}--list-box--disabled
+  input[role='combobox'] {
+  border-color: transparent;
+
+  &:hover {
+    border-color: transparent;
+  }
+}
+
+.#{$prefix}--list-box--light.#{$prefix}--list-box[data-invalid]
+  input[role='combobox'] {
+  border: 1px solid $om-color-danger;
+}
+
+.#{$prefix}--combo-box.#{$prefix}--list-box--expanded input[role='combobox'] {
+  border-color: transparent;
+  outline: 0;
+}
+
+.#{$prefix}--combo-box.#{$prefix}--list-box[data-invalid]
+  .#{$prefix}--list-box__field {
+  outline: none;
+  border: 0;
+}
+.#{$prefix}--list-box[data-invalid]
+  .#{$prefix}--list-box__field
+  .#{$prefix}--text-input {
+  border: 1px solid $om-color-danger;
+  outline: none;
+  border-radius: $om-border-radius;
+
+  &:hover,
+  &:focus {
+    border-color: $om-color-danger;
+  }
+}
+
+.#{$prefix}--list-box--light.#{$prefix}--list-box--expanded.#{$prefix}--combo-box
+  input[role='combobox'] {
+  border-color: transparent;
+}

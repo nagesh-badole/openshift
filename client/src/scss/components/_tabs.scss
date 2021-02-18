@@ -1,0 +1,17 @@
+.#{$prefix}--tabs__nav-item {
+  &:hover:not(.#{$prefix}--tabs__nav-item--selected) {
+    @include carbon--breakpoint('md') {
+      background-color: $om-color-gray-lightest;
+    }
+  }
+}
+
+a.#{$prefix}--tabs__nav-link:focus,
+a.#{$prefix}--tabs__nav-link:active {
+  outline-color: $om-color-primary;
+}
+
+.#{$prefix}--tabs__nav-item--selected:not(.#{$prefix}--tabs__nav-item--disabled)
+  .#{$prefix}--tabs__nav-link {
+  @include om--font-weight('bold');
+}
